@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="6f8eaff0011e428dab2c0192712487c6" Name="Diagram1" ZoomLevel="55">
+        <EntityTypeShape EntityType="ModelDatabase.tb_appointment" Width="1.5" PointX="3" PointY="7.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModelDatabase.tb_clinicalrecord" Width="1.5" PointX="11.75" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModelDatabase.tb_employee" Width="1.5" PointX="0.75" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModelDatabase.tb_examination" Width="1.5" PointX="7.5" PointY="10.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModelDatabase.tb_examination_act" Width="1.5" PointX="9.75" PointY="11.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModelDatabase.tb_examinetype" Width="1.5" PointX="5.25" PointY="14.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModelDatabase.tb_medicine" Width="1.5" PointX="9.75" PointY="2.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModelDatabase.tb_paramact" Width="1.5" PointX="7.5" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModelDatabase.tb_paramprescription" Width="1.5" PointX="3" PointY="14.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModelDatabase.tb_paramprescription_medicine" Width="1.5" PointX="5.25" PointY="12" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModelDatabase.tb_patient" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModelDatabase.tb_patient_clinicalrecord" Width="1.5" PointX="14" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModelDatabase.tb_prescription" Width="1.5" PointX="9.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModelDatabase.tb_prescription_detail" Width="1.5" PointX="12" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModelDatabase.tb_profession" Width="1.5" PointX="0.75" PointY="2.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModelDatabase.tb_relative_paramact" Width="1.5" PointX="5.25" PointY="18.125" IsExpanded="true" />
+        <AssociationConnector Association="ModelDatabase.tb_appointment_employeeid_fk" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelDatabase.tb_patientclinicalrecord_clinicalrecordid_fk" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelDatabase.tb_examination_employeeid_fk" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelDatabase.tb_examinationact_employeeid_fk" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelDatabase.tb_paramprescription_employeeid_fk" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelDatabase.tb_prescription_employeeid_fk" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelDatabase.tb_examination_examinetypeid_fk" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelDatabase.tb_examinationact_examinationid_fk" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelDatabase.tb_prescription_examinationid_fk" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelDatabase.tb_examinationact_paramactid_fk" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelDatabase.tb_examinetype_paramprescriptionid_fk" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelDatabase.tb_paramprescription_medicineid_fk" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelDatabase.tb_prescriptiondetail_medicineid_fk" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelDatabase.tb_paramact_relativeparamactid_fk" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelDatabase.tb_paramprescriptionid_medicine_fk" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelDatabase.tb_patient_professionid_fk" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelDatabase.tb_prescriptiondetail_prescriptionid_fk" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelDatabase.tb_examinetype_paramact" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

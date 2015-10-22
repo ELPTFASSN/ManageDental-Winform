@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ModelDatabaseStoreContainer" CdmEntityContainer="ModelEntities">
+    <EntitySetMapping Name="tb_config_practice">
+      <EntityTypeMapping TypeName="ModelDatabase.tb_config_practice">
+        <MappingFragment StoreEntitySet="tb_config_practice">
+          <ScalarProperty Name="ConfigID" ColumnName="ConfigID" />
+          <ScalarProperty Name="LiftingPower" ColumnName="LiftingPower" />
+          <ScalarProperty Name="Rate" ColumnName="Rate" />
+          <ScalarProperty Name="RunTime" ColumnName="RunTime" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_exercise">
+      <EntityTypeMapping TypeName="ModelDatabase.tb_exercise">
+        <MappingFragment StoreEntitySet="tb_exercise">
+          <ScalarProperty Name="ExerciseID" ColumnName="ExerciseID" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="ConfigID_Default" ColumnName="ConfigID_Default" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_person">
+      <EntityTypeMapping TypeName="ModelDatabase.tb_person">
+        <MappingFragment StoreEntitySet="tb_person">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="PersonID" ColumnName="PersonID" />
+          <ScalarProperty Name="NickName" ColumnName="NickName" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="Birthday" ColumnName="Birthday" />
+          <ScalarProperty Name="Marital" ColumnName="Marital" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="ProfessionID" ColumnName="ProfessionID" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Tel" ColumnName="Tel" />
+          <ScalarProperty Name="MobilePhone" ColumnName="MobilePhone" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Picture" ColumnName="Picture" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_person_exercise">
+      <EntityTypeMapping TypeName="ModelDatabase.tb_person_exercise">
+        <MappingFragment StoreEntitySet="tb_person_exercise">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="PersonID" ColumnName="PersonID" />
+          <ScalarProperty Name="ExerciseID" ColumnName="ExerciseID" />
+          <ScalarProperty Name="Result" ColumnName="Result" />
+          <ScalarProperty Name="ConfigID" ColumnName="ConfigID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

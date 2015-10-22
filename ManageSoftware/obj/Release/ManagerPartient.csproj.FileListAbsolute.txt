@@ -1,0 +1,23 @@
+C:\Users\NguyenNgoc\Desktop\Phan mem nha khoa\ManagerPartient\ManagerPartient\bin\Release\ManagerPartient.exe.config
+C:\Users\NguyenNgoc\Desktop\Phan mem nha khoa\ManagerPartient\ManagerPartient\bin\Release\ManagerPartient.exe
+C:\Users\NguyenNgoc\Desktop\Phan mem nha khoa\ManagerPartient\ManagerPartient\bin\Release\ManagerPartient.pdb
+C:\Users\NguyenNgoc\Desktop\Phan mem nha khoa\ManagerPartient\ManagerPartient\bin\Release\EntityFramework.dll
+C:\Users\NguyenNgoc\Desktop\Phan mem nha khoa\ManagerPartient\ManagerPartient\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\NguyenNgoc\Desktop\Phan mem nha khoa\ManagerPartient\ManagerPartient\bin\Release\EntityFramework.xml
+C:\Users\NguyenNgoc\Desktop\Phan mem nha khoa\ManagerPartient\ManagerPartient\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\NguyenNgoc\Desktop\Phan mem nha khoa\ManagerPartient\ManagerPartient\obj\Release\ManagerPartient.CustomControl.ButtonFunction.resources
+C:\Users\NguyenNgoc\Desktop\Phan mem nha khoa\ManagerPartient\ManagerPartient\obj\Release\ManagerPartient.CustomControl.ButtonMenuBar.resources
+C:\Users\NguyenNgoc\Desktop\Phan mem nha khoa\ManagerPartient\ManagerPartient\obj\Release\ManagerPartient.FormBanner.resources
+C:\Users\NguyenNgoc\Desktop\Phan mem nha khoa\ManagerPartient\ManagerPartient\obj\Release\ManagerPartient.FormMain.resources
+C:\Users\NguyenNgoc\Desktop\Phan mem nha khoa\ManagerPartient\ManagerPartient\obj\Release\ManagerPartient.Gui.FormDialogMain.resources
+C:\Users\NguyenNgoc\Desktop\Phan mem nha khoa\ManagerPartient\ManagerPartient\obj\Release\ManagerPartient.Gui.PanelHome.resources
+C:\Users\NguyenNgoc\Desktop\Phan mem nha khoa\ManagerPartient\ManagerPartient\obj\Release\ManagerPartient.Gui.PanelListPatient.resources
+C:\Users\NguyenNgoc\Desktop\Phan mem nha khoa\ManagerPartient\ManagerPartient\obj\Release\ManagerPartient.Gui.PanelCreatePatient.resources
+C:\Users\NguyenNgoc\Desktop\Phan mem nha khoa\ManagerPartient\ManagerPartient\obj\Release\ManagerPartient.Properties.Resources.resources
+C:\Users\NguyenNgoc\Desktop\Phan mem nha khoa\ManagerPartient\ManagerPartient\obj\Release\ManagerPartient.csproj.GenerateResource.Cache
+C:\Users\NguyenNgoc\Desktop\Phan mem nha khoa\ManagerPartient\ManagerPartient\obj\Release\ManagerPartient.exe
+C:\Users\NguyenNgoc\Desktop\Phan mem nha khoa\ManagerPartient\ManagerPartient\obj\Release\ManagerPartient.pdb
+J:\ManagerPartient.exe.config
+J:\Release\ManagerPartient.exe.config
+J:\Release\ManagerPartient.exe
+J:\Release\ManagerPartient.pdb

@@ -1,0 +1,593 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="tb_appointment">
+    <Key>
+      <PropertyRef Name="AppointmentID" />
+    </Key>
+    <Property Name="AppointmentID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DoctorID" Type="varchar" MaxLength="20" />
+    <Property Name="PatientID" Type="varchar" MaxLength="20" />
+    <Property Name="StartTime" Type="datetime" Nullable="false" />
+    <Property Name="EndTime" Type="datetime" Nullable="false" />
+    <Property Name="Content" Type="nvarchar" MaxLength="500" />
+    <Property Name="State" Type="varchar" MaxLength="11" />
+  </EntityType>
+  <EntityType Name="tb_clinicalrecord">
+    <Key>
+      <PropertyRef Name="ClinicalRecordID" />
+    </Key>
+    <Property Name="ClinicalRecordID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ClinicalRecordName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="tb_employee">
+    <Key>
+      <PropertyRef Name="EmployeeID" />
+    </Key>
+    <Property Name="EmployeeID" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="FirstName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Birthday" Type="datetime" Nullable="false" />
+    <Property Name="Gender" Type="varchar" MaxLength="6" />
+    <Property Name="NativeCountry" Type="nvarchar" MaxLength="250" />
+    <Property Name="Address" Type="nvarchar" MaxLength="250" />
+    <Property Name="IdentityCard" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="Tel" Type="varchar" MaxLength="20" />
+    <Property Name="MobilePhone" Type="varchar" MaxLength="20" />
+    <Property Name="DateJoin" Type="datetime" Nullable="false" />
+    <Property Name="Email" Type="varchar" MaxLength="50" />
+    <Property Name="Picture" Type="image" />
+  </EntityType>
+  <EntityType Name="tb_examination">
+    <Key>
+      <PropertyRef Name="ExaminationID" />
+    </Key>
+    <Property Name="ExaminationID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PatientID" Type="varchar" MaxLength="20" />
+    <Property Name="StartDate" Type="datetime" />
+    <Property Name="EndDate" Type="datetime" />
+    <Property Name="ExamineTypeID" Type="int" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+    <Property Name="LastEditDate" Type="datetime" />
+    <Property Name="PersonSettingID" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="IsExamine" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tb_examination_act">
+    <Key>
+      <PropertyRef Name="Examination_ActID" />
+    </Key>
+    <Property Name="Examination_ActID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ExaminationID" Type="int" Nullable="false" />
+    <Property Name="ParamActID" Type="int" />
+    <Property Name="StartTime" Type="datetime" />
+    <Property Name="Description" Type="nvarchar" MaxLength="500" />
+    <Property Name="State" Type="varchar" MaxLength="11" />
+    <Property Name="toothProperty" Type="varchar" MaxLength="100" />
+    <Property Name="positionProperty" Type="varchar" MaxLength="200" />
+    <Property Name="IsCommonAct" Type="int" />
+    <Property Name="EndTime" Type="datetime" />
+    <Property Name="DoctorID" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="numberact" Type="int" />
+  </EntityType>
+  <EntityType Name="tb_examinetype">
+    <Key>
+      <PropertyRef Name="ExamineTypeID" />
+    </Key>
+    <Property Name="ExamineTypeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ExamineTypeName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="500" />
+    <Property Name="ParamPrescriptionID" Type="int" />
+  </EntityType>
+  <EntityType Name="tb_examinetype_paramact">
+    <Key>
+      <PropertyRef Name="ExamineTypeID" />
+      <PropertyRef Name="ParamActID" />
+    </Key>
+    <Property Name="ExamineTypeID" Type="int" Nullable="false" />
+    <Property Name="ParamActID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tb_medicine">
+    <Key>
+      <PropertyRef Name="MedicineID" />
+    </Key>
+    <Property Name="MedicineID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MedicineCode" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="MedicineName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Country" Type="nvarchar" MaxLength="50" />
+    <Property Name="ServiceLife" Type="int" />
+    <Property Name="UnitLife" Type="nvarchar" MaxLength="20" />
+    <Property Name="UsesOfMedicine" Type="nvarchar" MaxLength="500" />
+    <Property Name="UnitType" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="tb_paramact">
+    <Key>
+      <PropertyRef Name="ParamActID" />
+    </Key>
+    <Property Name="ParamActID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ParamActName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="TimeOfExecution" Type="int" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="500" />
+    <Property Name="relative_paramact_id" Type="int" />
+  </EntityType>
+  <EntityType Name="tb_paramprescription">
+    <Key>
+      <PropertyRef Name="ParamPrescriptionID" />
+    </Key>
+    <Property Name="ParamPrescriptionID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ParamPrescriptionName" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="DoctorID" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="tb_paramprescription_medicine">
+    <Key>
+      <PropertyRef Name="ParamPrescriptionID" />
+      <PropertyRef Name="MedicineID" />
+    </Key>
+    <Property Name="ParamPrescriptionID" Type="int" Nullable="false" />
+    <Property Name="MedicineID" Type="int" Nullable="false" />
+    <Property Name="Quantity" Type="int" Nullable="false" />
+    <Property Name="DirectionsForUse" Type="nvarchar" MaxLength="500" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tb_patient">
+    <Key>
+      <PropertyRef Name="PatientID" />
+    </Key>
+    <Property Name="PatientID" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="FirstName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Birthday" Type="datetime" Nullable="false" />
+    <Property Name="Gender" Type="varchar" MaxLength="6" />
+    <Property Name="ProfessionID" Type="int" />
+    <Property Name="Address" Type="nvarchar" MaxLength="250" />
+    <Property Name="IdentityCard" Type="varchar" MaxLength="20" />
+    <Property Name="Tel" Type="varchar" MaxLength="20" />
+    <Property Name="MobilePhone" Type="varchar" MaxLength="20" />
+    <Property Name="Email" Type="varchar" MaxLength="50" />
+    <Property Name="Picture" Type="image" />
+    <Property Name="Note" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="tb_patient_clinicalrecord">
+    <Key>
+      <PropertyRef Name="PatientID" />
+      <PropertyRef Name="ClinicalRecordID" />
+    </Key>
+    <Property Name="PatientID" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="ClinicalRecordID" Type="int" Nullable="false" />
+    <Property Name="Note" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="tb_prescription">
+    <Key>
+      <PropertyRef Name="PrescriptionID" />
+    </Key>
+    <Property Name="PrescriptionID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ExaminationID" Type="int" Nullable="false" />
+    <Property Name="EmployeeID" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="PatientID" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="DateOfIssuee" Type="datetime" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="tb_prescription_detail">
+    <Key>
+      <PropertyRef Name="MedicineID" />
+      <PropertyRef Name="PrescriptionID" />
+    </Key>
+    <Property Name="MedicineID" Type="int" Nullable="false" />
+    <Property Name="PrescriptionID" Type="int" Nullable="false" />
+    <Property Name="Quantity" Type="int" Nullable="false" />
+    <Property Name="Direction" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="tb_profession">
+    <Key>
+      <PropertyRef Name="ProfessionID" />
+    </Key>
+    <Property Name="ProfessionID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProfessionName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="tb_relative_paramact">
+    <Key>
+      <PropertyRef Name="relative_paramact_id" />
+    </Key>
+    <Property Name="relative_paramact_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="relative_paramact_name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <Association Name="tb_appointment_employeeid_fk">
+    <End Role="tb_employee" Type="Self.tb_employee" Multiplicity="0..1" />
+    <End Role="tb_appointment" Type="Self.tb_appointment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_employee">
+        <PropertyRef Name="EmployeeID" />
+      </Principal>
+      <Dependent Role="tb_appointment">
+        <PropertyRef Name="DoctorID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="tb_appointment_patientid_fk">
+    <End Role="tb_patient" Type="Self.tb_patient" Multiplicity="0..1" />
+    <End Role="tb_appointment" Type="Self.tb_appointment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_patient">
+        <PropertyRef Name="PatientID" />
+      </Principal>
+      <Dependent Role="tb_appointment">
+        <PropertyRef Name="PatientID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="tb_examination_employeeid_fk">
+    <End Role="tb_employee" Type="Self.tb_employee" Multiplicity="1" />
+    <End Role="tb_examination" Type="Self.tb_examination" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_employee">
+        <PropertyRef Name="EmployeeID" />
+      </Principal>
+      <Dependent Role="tb_examination">
+        <PropertyRef Name="PersonSettingID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="tb_examination_examinetypeid_fk">
+    <End Role="tb_examinetype" Type="Self.tb_examinetype" Multiplicity="0..1" />
+    <End Role="tb_examination" Type="Self.tb_examination" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_examinetype">
+        <PropertyRef Name="ExamineTypeID" />
+      </Principal>
+      <Dependent Role="tb_examination">
+        <PropertyRef Name="ExamineTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="tb_examination_patientid_fk">
+    <End Role="tb_patient" Type="Self.tb_patient" Multiplicity="0..1" />
+    <End Role="tb_examination" Type="Self.tb_examination" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_patient">
+        <PropertyRef Name="PatientID" />
+      </Principal>
+      <Dependent Role="tb_examination">
+        <PropertyRef Name="PatientID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="tb_examinationact_employeeid_fk">
+    <End Role="tb_employee" Type="Self.tb_employee" Multiplicity="1" />
+    <End Role="tb_examination_act" Type="Self.tb_examination_act" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_employee">
+        <PropertyRef Name="EmployeeID" />
+      </Principal>
+      <Dependent Role="tb_examination_act">
+        <PropertyRef Name="DoctorID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="tb_examinationact_examinationid_fk">
+    <End Role="tb_examination" Type="Self.tb_examination" Multiplicity="1" />
+    <End Role="tb_examination_act" Type="Self.tb_examination_act" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_examination">
+        <PropertyRef Name="ExaminationID" />
+      </Principal>
+      <Dependent Role="tb_examination_act">
+        <PropertyRef Name="ExaminationID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="tb_examinationact_paramactid_fk">
+    <End Role="tb_paramact" Type="Self.tb_paramact" Multiplicity="0..1" />
+    <End Role="tb_examination_act" Type="Self.tb_examination_act" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_paramact">
+        <PropertyRef Name="ParamActID" />
+      </Principal>
+      <Dependent Role="tb_examination_act">
+        <PropertyRef Name="ParamActID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="tb_examinetype_paramprescriptionid_fk">
+    <End Role="tb_paramprescription" Type="Self.tb_paramprescription" Multiplicity="0..1" />
+    <End Role="tb_examinetype" Type="Self.tb_examinetype" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_paramprescription">
+        <PropertyRef Name="ParamPrescriptionID" />
+      </Principal>
+      <Dependent Role="tb_examinetype">
+        <PropertyRef Name="ParamPrescriptionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="tb_examinetypeparamact_examinetypeid_fk">
+    <End Role="tb_examinetype" Type="Self.tb_examinetype" Multiplicity="1" />
+    <End Role="tb_examinetype_paramact" Type="Self.tb_examinetype_paramact" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_examinetype">
+        <PropertyRef Name="ExamineTypeID" />
+      </Principal>
+      <Dependent Role="tb_examinetype_paramact">
+        <PropertyRef Name="ExamineTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="tb_examinetypeparamact_paramactid_fk">
+    <End Role="tb_paramact" Type="Self.tb_paramact" Multiplicity="1" />
+    <End Role="tb_examinetype_paramact" Type="Self.tb_examinetype_paramact" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_paramact">
+        <PropertyRef Name="ParamActID" />
+      </Principal>
+      <Dependent Role="tb_examinetype_paramact">
+        <PropertyRef Name="ParamActID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="tb_paramact_relativeparamactid_fk">
+    <End Role="tb_relative_paramact" Type="Self.tb_relative_paramact" Multiplicity="0..1" />
+    <End Role="tb_paramact" Type="Self.tb_paramact" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_relative_paramact">
+        <PropertyRef Name="relative_paramact_id" />
+      </Principal>
+      <Dependent Role="tb_paramact">
+        <PropertyRef Name="relative_paramact_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="tb_paramprescription_employeeid_fk">
+    <End Role="tb_employee" Type="Self.tb_employee" Multiplicity="1" />
+    <End Role="tb_paramprescription" Type="Self.tb_paramprescription" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_employee">
+        <PropertyRef Name="EmployeeID" />
+      </Principal>
+      <Dependent Role="tb_paramprescription">
+        <PropertyRef Name="DoctorID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="tb_paramprescription_medicineid_fk">
+    <End Role="tb_medicine" Type="Self.tb_medicine" Multiplicity="1" />
+    <End Role="tb_paramprescription_medicine" Type="Self.tb_paramprescription_medicine" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_medicine">
+        <PropertyRef Name="MedicineID" />
+      </Principal>
+      <Dependent Role="tb_paramprescription_medicine">
+        <PropertyRef Name="MedicineID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="tb_paramprescriptionid_medicine_fk">
+    <End Role="tb_paramprescription" Type="Self.tb_paramprescription" Multiplicity="1" />
+    <End Role="tb_paramprescription_medicine" Type="Self.tb_paramprescription_medicine" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_paramprescription">
+        <PropertyRef Name="ParamPrescriptionID" />
+      </Principal>
+      <Dependent Role="tb_paramprescription_medicine">
+        <PropertyRef Name="ParamPrescriptionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="tb_patient_professionid_fk">
+    <End Role="tb_profession" Type="Self.tb_profession" Multiplicity="0..1" />
+    <End Role="tb_patient" Type="Self.tb_patient" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_profession">
+        <PropertyRef Name="ProfessionID" />
+      </Principal>
+      <Dependent Role="tb_patient">
+        <PropertyRef Name="ProfessionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="tb_patientclinicalrecord_clinicalrecordid_fk">
+    <End Role="tb_clinicalrecord" Type="Self.tb_clinicalrecord" Multiplicity="1" />
+    <End Role="tb_patient_clinicalrecord" Type="Self.tb_patient_clinicalrecord" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_clinicalrecord">
+        <PropertyRef Name="ClinicalRecordID" />
+      </Principal>
+      <Dependent Role="tb_patient_clinicalrecord">
+        <PropertyRef Name="ClinicalRecordID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="tb_patientclinicalrecord_patientid_fk">
+    <End Role="tb_patient" Type="Self.tb_patient" Multiplicity="1" />
+    <End Role="tb_patient_clinicalrecord" Type="Self.tb_patient_clinicalrecord" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_patient">
+        <PropertyRef Name="PatientID" />
+      </Principal>
+      <Dependent Role="tb_patient_clinicalrecord">
+        <PropertyRef Name="PatientID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="tb_prescription_employeeid_fk">
+    <End Role="tb_employee" Type="Self.tb_employee" Multiplicity="1" />
+    <End Role="tb_prescription" Type="Self.tb_prescription" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_employee">
+        <PropertyRef Name="EmployeeID" />
+      </Principal>
+      <Dependent Role="tb_prescription">
+        <PropertyRef Name="EmployeeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="tb_prescription_examinationid_fk">
+    <End Role="tb_examination" Type="Self.tb_examination" Multiplicity="1" />
+    <End Role="tb_prescription" Type="Self.tb_prescription" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_examination">
+        <PropertyRef Name="ExaminationID" />
+      </Principal>
+      <Dependent Role="tb_prescription">
+        <PropertyRef Name="ExaminationID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="tb_prescription_patientid_fk">
+    <End Role="tb_patient" Type="Self.tb_patient" Multiplicity="1" />
+    <End Role="tb_prescription" Type="Self.tb_prescription" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_patient">
+        <PropertyRef Name="PatientID" />
+      </Principal>
+      <Dependent Role="tb_prescription">
+        <PropertyRef Name="PatientID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="tb_prescriptiondetail_medicineid_fk">
+    <End Role="tb_medicine" Type="Self.tb_medicine" Multiplicity="1" />
+    <End Role="tb_prescription_detail" Type="Self.tb_prescription_detail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_medicine">
+        <PropertyRef Name="MedicineID" />
+      </Principal>
+      <Dependent Role="tb_prescription_detail">
+        <PropertyRef Name="MedicineID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="tb_prescriptiondetail_prescriptionid_fk">
+    <End Role="tb_prescription" Type="Self.tb_prescription" Multiplicity="1" />
+    <End Role="tb_prescription_detail" Type="Self.tb_prescription_detail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_prescription">
+        <PropertyRef Name="PrescriptionID" />
+      </Principal>
+      <Dependent Role="tb_prescription_detail">
+        <PropertyRef Name="PrescriptionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="ModelStoreContainer">
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tb_appointment" EntityType="Self.tb_appointment" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tb_clinicalrecord" EntityType="Self.tb_clinicalrecord" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tb_employee" EntityType="Self.tb_employee" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tb_examination" EntityType="Self.tb_examination" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tb_examination_act" EntityType="Self.tb_examination_act" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tb_examinetype" EntityType="Self.tb_examinetype" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tb_examinetype_paramact" EntityType="Self.tb_examinetype_paramact" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tb_medicine" EntityType="Self.tb_medicine" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tb_paramact" EntityType="Self.tb_paramact" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tb_paramprescription" EntityType="Self.tb_paramprescription" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tb_paramprescription_medicine" EntityType="Self.tb_paramprescription_medicine" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tb_patient" EntityType="Self.tb_patient" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tb_patient_clinicalrecord" EntityType="Self.tb_patient_clinicalrecord" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tb_prescription" EntityType="Self.tb_prescription" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tb_prescription_detail" EntityType="Self.tb_prescription_detail" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tb_profession" EntityType="Self.tb_profession" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tb_relative_paramact" EntityType="Self.tb_relative_paramact" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="tb_appointment_employeeid_fk" Association="Self.tb_appointment_employeeid_fk">
+      <End Role="tb_employee" EntitySet="tb_employee" />
+      <End Role="tb_appointment" EntitySet="tb_appointment" />
+    </AssociationSet>
+    <AssociationSet Name="tb_appointment_patientid_fk" Association="Self.tb_appointment_patientid_fk">
+      <End Role="tb_patient" EntitySet="tb_patient" />
+      <End Role="tb_appointment" EntitySet="tb_appointment" />
+    </AssociationSet>
+    <AssociationSet Name="tb_examination_employeeid_fk" Association="Self.tb_examination_employeeid_fk">
+      <End Role="tb_employee" EntitySet="tb_employee" />
+      <End Role="tb_examination" EntitySet="tb_examination" />
+    </AssociationSet>
+    <AssociationSet Name="tb_examination_examinetypeid_fk" Association="Self.tb_examination_examinetypeid_fk">
+      <End Role="tb_examinetype" EntitySet="tb_examinetype" />
+      <End Role="tb_examination" EntitySet="tb_examination" />
+    </AssociationSet>
+    <AssociationSet Name="tb_examination_patientid_fk" Association="Self.tb_examination_patientid_fk">
+      <End Role="tb_patient" EntitySet="tb_patient" />
+      <End Role="tb_examination" EntitySet="tb_examination" />
+    </AssociationSet>
+    <AssociationSet Name="tb_examinationact_employeeid_fk" Association="Self.tb_examinationact_employeeid_fk">
+      <End Role="tb_employee" EntitySet="tb_employee" />
+      <End Role="tb_examination_act" EntitySet="tb_examination_act" />
+    </AssociationSet>
+    <AssociationSet Name="tb_examinationact_examinationid_fk" Association="Self.tb_examinationact_examinationid_fk">
+      <End Role="tb_examination" EntitySet="tb_examination" />
+      <End Role="tb_examination_act" EntitySet="tb_examination_act" />
+    </AssociationSet>
+    <AssociationSet Name="tb_examinationact_paramactid_fk" Association="Self.tb_examinationact_paramactid_fk">
+      <End Role="tb_paramact" EntitySet="tb_paramact" />
+      <End Role="tb_examination_act" EntitySet="tb_examination_act" />
+    </AssociationSet>
+    <AssociationSet Name="tb_examinetype_paramprescriptionid_fk" Association="Self.tb_examinetype_paramprescriptionid_fk">
+      <End Role="tb_paramprescription" EntitySet="tb_paramprescription" />
+      <End Role="tb_examinetype" EntitySet="tb_examinetype" />
+    </AssociationSet>
+    <AssociationSet Name="tb_examinetypeparamact_examinetypeid_fk" Association="Self.tb_examinetypeparamact_examinetypeid_fk">
+      <End Role="tb_examinetype" EntitySet="tb_examinetype" />
+      <End Role="tb_examinetype_paramact" EntitySet="tb_examinetype_paramact" />
+    </AssociationSet>
+    <AssociationSet Name="tb_examinetypeparamact_paramactid_fk" Association="Self.tb_examinetypeparamact_paramactid_fk">
+      <End Role="tb_paramact" EntitySet="tb_paramact" />
+      <End Role="tb_examinetype_paramact" EntitySet="tb_examinetype_paramact" />
+    </AssociationSet>
+    <AssociationSet Name="tb_paramact_relativeparamactid_fk" Association="Self.tb_paramact_relativeparamactid_fk">
+      <End Role="tb_relative_paramact" EntitySet="tb_relative_paramact" />
+      <End Role="tb_paramact" EntitySet="tb_paramact" />
+    </AssociationSet>
+    <AssociationSet Name="tb_paramprescription_employeeid_fk" Association="Self.tb_paramprescription_employeeid_fk">
+      <End Role="tb_employee" EntitySet="tb_employee" />
+      <End Role="tb_paramprescription" EntitySet="tb_paramprescription" />
+    </AssociationSet>
+    <AssociationSet Name="tb_paramprescription_medicineid_fk" Association="Self.tb_paramprescription_medicineid_fk">
+      <End Role="tb_medicine" EntitySet="tb_medicine" />
+      <End Role="tb_paramprescription_medicine" EntitySet="tb_paramprescription_medicine" />
+    </AssociationSet>
+    <AssociationSet Name="tb_paramprescriptionid_medicine_fk" Association="Self.tb_paramprescriptionid_medicine_fk">
+      <End Role="tb_paramprescription" EntitySet="tb_paramprescription" />
+      <End Role="tb_paramprescription_medicine" EntitySet="tb_paramprescription_medicine" />
+    </AssociationSet>
+    <AssociationSet Name="tb_patient_professionid_fk" Association="Self.tb_patient_professionid_fk">
+      <End Role="tb_profession" EntitySet="tb_profession" />
+      <End Role="tb_patient" EntitySet="tb_patient" />
+    </AssociationSet>
+    <AssociationSet Name="tb_patientclinicalrecord_clinicalrecordid_fk" Association="Self.tb_patientclinicalrecord_clinicalrecordid_fk">
+      <End Role="tb_clinicalrecord" EntitySet="tb_clinicalrecord" />
+      <End Role="tb_patient_clinicalrecord" EntitySet="tb_patient_clinicalrecord" />
+    </AssociationSet>
+    <AssociationSet Name="tb_patientclinicalrecord_patientid_fk" Association="Self.tb_patientclinicalrecord_patientid_fk">
+      <End Role="tb_patient" EntitySet="tb_patient" />
+      <End Role="tb_patient_clinicalrecord" EntitySet="tb_patient_clinicalrecord" />
+    </AssociationSet>
+    <AssociationSet Name="tb_prescription_employeeid_fk" Association="Self.tb_prescription_employeeid_fk">
+      <End Role="tb_employee" EntitySet="tb_employee" />
+      <End Role="tb_prescription" EntitySet="tb_prescription" />
+    </AssociationSet>
+    <AssociationSet Name="tb_prescription_examinationid_fk" Association="Self.tb_prescription_examinationid_fk">
+      <End Role="tb_examination" EntitySet="tb_examination" />
+      <End Role="tb_prescription" EntitySet="tb_prescription" />
+    </AssociationSet>
+    <AssociationSet Name="tb_prescription_patientid_fk" Association="Self.tb_prescription_patientid_fk">
+      <End Role="tb_patient" EntitySet="tb_patient" />
+      <End Role="tb_prescription" EntitySet="tb_prescription" />
+    </AssociationSet>
+    <AssociationSet Name="tb_prescriptiondetail_medicineid_fk" Association="Self.tb_prescriptiondetail_medicineid_fk">
+      <End Role="tb_medicine" EntitySet="tb_medicine" />
+      <End Role="tb_prescription_detail" EntitySet="tb_prescription_detail" />
+    </AssociationSet>
+    <AssociationSet Name="tb_prescriptiondetail_prescriptionid_fk" Association="Self.tb_prescriptiondetail_prescriptionid_fk">
+      <End Role="tb_prescription" EntitySet="tb_prescription" />
+      <End Role="tb_prescription_detail" EntitySet="tb_prescription_detail" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

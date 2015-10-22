@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ModelDatabase.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="tb_config_practice">
+    <Key>
+      <PropertyRef Name="ConfigID" />
+    </Key>
+    <Property Name="ConfigID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="LiftingPower" Type="int" />
+    <Property Name="Rate" Type="int" />
+    <Property Name="RunTime" Type="int" />
+    <Property Name="Note" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="tb_exercise">
+    <Key>
+      <PropertyRef Name="ExerciseID" />
+    </Key>
+    <Property Name="ExerciseID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="1000" />
+    <Property Name="Note" Type="nvarchar" MaxLength="500" />
+    <Property Name="ConfigID_Default" Type="int" />
+  </EntityType>
+  <EntityType Name="tb_person">
+    <Key>
+      <PropertyRef Name="PersonID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PersonID" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="NickName" Type="nvarchar" MaxLength="50" />
+    <Property Name="FullName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Birthday" Type="datetime" />
+    <Property Name="Marital" Type="varchar" MaxLength="10" />
+    <Property Name="Gender" Type="varchar" MaxLength="6" />
+    <Property Name="ProfessionID" Type="int" />
+    <Property Name="Address" Type="nvarchar" MaxLength="250" />
+    <Property Name="Tel" Type="varchar" MaxLength="20" />
+    <Property Name="MobilePhone" Type="varchar" MaxLength="20" />
+    <Property Name="Email" Type="varchar" MaxLength="50" />
+    <Property Name="Picture" Type="image" />
+    <Property Name="Note" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="tb_person_exercise">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PersonID" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="ExerciseID" Type="int" />
+    <Property Name="Result" Type="nvarchar" MaxLength="100" />
+    <Property Name="ConfigID" Type="int" />
+  </EntityType>
+  <Association Name="tb_exercise_practice_fk1">
+    <End Role="tb_config_practice" Type="Self.tb_config_practice" Multiplicity="0..1" />
+    <End Role="tb_exercise" Type="Self.tb_exercise" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_config_practice">
+        <PropertyRef Name="ConfigID" />
+      </Principal>
+      <Dependent Role="tb_exercise">
+        <PropertyRef Name="ConfigID_Default" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="tb_person_exercise_fk1">
+    <End Role="tb_person" Type="Self.tb_person" Multiplicity="1" />
+    <End Role="tb_person_exercise" Type="Self.tb_person_exercise" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_person">
+        <PropertyRef Name="PersonID" />
+      </Principal>
+      <Dependent Role="tb_person_exercise">
+        <PropertyRef Name="PersonID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="tb_person_exercise_fk2">
+    <End Role="tb_exercise" Type="Self.tb_exercise" Multiplicity="0..1" />
+    <End Role="tb_person_exercise" Type="Self.tb_person_exercise" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_exercise">
+        <PropertyRef Name="ExerciseID" />
+      </Principal>
+      <Dependent Role="tb_person_exercise">
+        <PropertyRef Name="ExerciseID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="ModelDatabaseStoreContainer">
+    <EntitySet Name="tb_config_practice" EntityType="Self.tb_config_practice" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tb_exercise" EntityType="Self.tb_exercise" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tb_person" EntityType="Self.tb_person" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tb_person_exercise" EntityType="Self.tb_person_exercise" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="tb_exercise_practice_fk1" Association="Self.tb_exercise_practice_fk1">
+      <End Role="tb_config_practice" EntitySet="tb_config_practice" />
+      <End Role="tb_exercise" EntitySet="tb_exercise" />
+    </AssociationSet>
+    <AssociationSet Name="tb_person_exercise_fk1" Association="Self.tb_person_exercise_fk1">
+      <End Role="tb_person" EntitySet="tb_person" />
+      <End Role="tb_person_exercise" EntitySet="tb_person_exercise" />
+    </AssociationSet>
+    <AssociationSet Name="tb_person_exercise_fk2" Association="Self.tb_person_exercise_fk2">
+      <End Role="tb_exercise" EntitySet="tb_exercise" />
+      <End Role="tb_person_exercise" EntitySet="tb_person_exercise" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

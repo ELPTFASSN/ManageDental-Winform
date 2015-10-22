@@ -1,0 +1,381 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DA970519-0FB1-41EE-992D-A4891EA396BF}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ManagerPartient</RootNamespace>
+    <AssemblyName>ManagerPartient</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>J:\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>ManagerPartient.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icon_dentistchair_128.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net40\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Core\ExcelWriter.cs" />
+    <Compile Include="Core\IFormDialogEdit.cs" />
+    <Compile Include="Core\IFormDialogMain.cs" />
+    <Compile Include="Core\IFormPanelChild.cs" />
+    <Compile Include="Core\UtilImage.cs" />
+    <Compile Include="CustomControl\ButtonEX.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomControl\ButtonFunction.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomControl\ButtonFunction.Designer.cs">
+      <DependentUpon>ButtonFunction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControl\ButtonMenuBar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomControl\ButtonMenuBar.Designer.cs">
+      <DependentUpon>ButtonMenuBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControl\ButtonCustom.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomControl\ButtonCustom.Designer.cs">
+      <DependentUpon>ButtonCustom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControl\ComboBoxEX.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomControl\FormLoad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomControl\FormLoad.Designer.cs">
+      <DependentUpon>FormLoad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControl\LabelEX.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomControl\MessageBoxEX.cs" />
+    <Compile Include="CustomControl\ProgressBarEX.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomControl\FormDialogMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomControl\FormDialogMain.Designer.cs">
+      <DependentUpon>FormDialogMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControl\TextBoxEX.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FormBanner.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBanner.Designer.cs">
+      <DependentUpon>FormBanner.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\AboutMe.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Gui\AboutMe.Designer.cs">
+      <DependentUpon>AboutMe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\PanelBackupRestore.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Gui\PanelBackupRestore.Designer.cs">
+      <DependentUpon>PanelBackupRestore.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\PanelFunction.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Gui\PanelFunction.Designer.cs">
+      <DependentUpon>PanelFunction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\PanelHome.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Gui\PanelHome.Designer.cs">
+      <DependentUpon>PanelHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\PanelCreatePatient.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Gui\PanelCreatePatient.Designer.cs">
+      <DependentUpon>PanelCreatePatient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModelManage\DoctorModelManage.cs" />
+    <Compile Include="ModelManage\MedicalRecordsModelManage.cs" />
+    <Compile Include="FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\PanelListPatient.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Gui\PanelListPatient.Designer.cs">
+      <DependentUpon>PanelListPatient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModelManage\ModelDatabase.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelDatabase.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelManage\ModelDatabase.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelDatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelManage\ModelDatabase.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelDatabase.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="ModelManage\PatientModelManage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ModelManage\tb_appointment.cs">
+      <DependentUpon>ModelDatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelManage\tb_clinicalrecord.cs">
+      <DependentUpon>ModelDatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelManage\tb_employee.cs">
+      <DependentUpon>ModelDatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelManage\tb_examination.cs">
+      <DependentUpon>ModelDatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelManage\tb_examination_act.cs">
+      <DependentUpon>ModelDatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelManage\tb_examinetype.cs">
+      <DependentUpon>ModelDatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelManage\tb_medicine.cs">
+      <DependentUpon>ModelDatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelManage\tb_paramact.cs">
+      <DependentUpon>ModelDatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelManage\tb_paramprescription.cs">
+      <DependentUpon>ModelDatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelManage\tb_paramprescription_medicine.cs">
+      <DependentUpon>ModelDatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelManage\tb_patient.cs">
+      <DependentUpon>ModelDatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelManage\tb_patient_clinicalrecord.cs">
+      <DependentUpon>ModelDatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelManage\tb_prescription.cs">
+      <DependentUpon>ModelDatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelManage\tb_prescription_detail.cs">
+      <DependentUpon>ModelDatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelManage\tb_profession.cs">
+      <DependentUpon>ModelDatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelManage\tb_relative_paramact.cs">
+      <DependentUpon>ModelDatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="CustomControl\ButtonFunction.resx">
+      <DependentUpon>ButtonFunction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomControl\ButtonMenuBar.resx">
+      <DependentUpon>ButtonMenuBar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomControl\FormLoad.resx">
+      <DependentUpon>FormLoad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBanner.resx">
+      <DependentUpon>FormBanner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomControl\FormDialogMain.resx">
+      <DependentUpon>FormDialogMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\AboutMe.resx">
+      <DependentUpon>AboutMe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\PanelBackupRestore.resx">
+      <DependentUpon>PanelBackupRestore.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\PanelFunction.resx">
+      <DependentUpon>PanelFunction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\PanelHome.resx">
+      <DependentUpon>PanelHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\PanelListPatient.resx">
+      <DependentUpon>PanelListPatient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\PanelCreatePatient.resx">
+      <DependentUpon>PanelCreatePatient.cs</DependentUpon>
+      <LastGenOutput>PanelCreatePatient1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EntityDeploy Include="ModelManage\ModelDatabase.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ModelDatabase.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="ModelManage\ModelDatabase.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelDatabase.edmx</DependentUpon>
+      <LastGenOutput>ModelDatabase.Context.cs</LastGenOutput>
+    </None>
+    <None Include="ModelManage\ModelDatabase.edmx.diagram">
+      <DependentUpon>ModelDatabase.edmx</DependentUpon>
+    </None>
+    <None Include="ModelManage\ModelDatabase.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelDatabase.edmx</DependentUpon>
+      <LastGenOutput>ModelDatabase.cs</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="Image\nha-khoa-banner-ngoc-minh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\line-menu-background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\button_menu_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\button_menu_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Icon\command_48.png" />
+    <Content Include="icon_dentistchair_128.ico" />
+    <None Include="Icon\icon_men.png" />
+    <None Include="Icon\icon_women.png" />
+    <None Include="Icon\icon_other.png" />
+    <Content Include="Icon\new_48.png" />
+    <None Include="Image\vector_383_06-128.png" />
+    <None Include="Icon\schedule_48.png" />
+    <Content Include="Icon\setting_48.png" />
+    <None Include="Image\icon_dentistchair_300x300.png" />
+    <None Include="Image\background_button_hover.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ModelDatabase" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="tb_config_practice">
+    <Key>
+      <PropertyRef Name="ConfigID" />
+    </Key>
+    <Property Name="ConfigID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="LiftingPower" Type="Int32" />
+    <Property Name="Rate" Type="Int32" />
+    <Property Name="RunTime" Type="Int32" />
+    <Property Name="Note" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="tb_exercise" Relationship="Self.tb_exercise_practice_fk1" FromRole="tb_config_practice" ToRole="tb_exercise" />
+  </EntityType>
+  <EntityType Name="tb_exercise">
+    <Key>
+      <PropertyRef Name="ExerciseID" />
+    </Key>
+    <Property Name="ExerciseID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="Note" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="ConfigID_Default" Type="Int32" />
+    <NavigationProperty Name="tb_config_practice" Relationship="Self.tb_exercise_practice_fk1" FromRole="tb_exercise" ToRole="tb_config_practice" />
+    <NavigationProperty Name="tb_person_exercise" Relationship="Self.tb_person_exercise_fk2" FromRole="tb_exercise" ToRole="tb_person_exercise" />
+  </EntityType>
+  <EntityType Name="tb_person">
+    <Key>
+      <PropertyRef Name="PersonID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PersonID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="NickName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="FullName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Birthday" Type="DateTime" Precision="3" />
+    <Property Name="Marital" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Gender" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Name="ProfessionID" Type="Int32" />
+    <Property Name="Address" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Tel" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="MobilePhone" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Picture" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="Note" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="tb_person_exercise" Relationship="Self.tb_person_exercise_fk1" FromRole="tb_person" ToRole="tb_person_exercise" />
+  </EntityType>
+  <EntityType Name="tb_person_exercise">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PersonID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ExerciseID" Type="Int32" />
+    <Property Name="Result" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="ConfigID" Type="Int32" />
+    <NavigationProperty Name="tb_exercise" Relationship="Self.tb_person_exercise_fk2" FromRole="tb_person_exercise" ToRole="tb_exercise" />
+    <NavigationProperty Name="tb_person" Relationship="Self.tb_person_exercise_fk1" FromRole="tb_person_exercise" ToRole="tb_person" />
+  </EntityType>
+  <Association Name="tb_exercise_practice_fk1">
+    <End Role="tb_config_practice" Type="Self.tb_config_practice" Multiplicity="0..1" />
+    <End Role="tb_exercise" Type="Self.tb_exercise" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_config_practice">
+        <PropertyRef Name="ConfigID" />
+      </Principal>
+      <Dependent Role="tb_exercise">
+        <PropertyRef Name="ConfigID_Default" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="tb_person_exercise_fk2">
+    <End Role="tb_exercise" Type="Self.tb_exercise" Multiplicity="0..1" />
+    <End Role="tb_person_exercise" Type="Self.tb_person_exercise" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_exercise">
+        <PropertyRef Name="ExerciseID" />
+      </Principal>
+      <Dependent Role="tb_person_exercise">
+        <PropertyRef Name="ExerciseID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="tb_person_exercise_fk1">
+    <End Role="tb_person" Type="Self.tb_person" Multiplicity="1" />
+    <End Role="tb_person_exercise" Type="Self.tb_person_exercise" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_person">
+        <PropertyRef Name="PersonID" />
+      </Principal>
+      <Dependent Role="tb_person_exercise">
+        <PropertyRef Name="PersonID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="ModelEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="tb_config_practice" EntityType="Self.tb_config_practice" />
+    <EntitySet Name="tb_exercise" EntityType="Self.tb_exercise" />
+    <EntitySet Name="tb_person" EntityType="Self.tb_person" />
+    <EntitySet Name="tb_person_exercise" EntityType="Self.tb_person_exercise" />
+    <AssociationSet Name="tb_exercise_practice_fk1" Association="Self.tb_exercise_practice_fk1">
+      <End Role="tb_config_practice" EntitySet="tb_config_practice" />
+      <End Role="tb_exercise" EntitySet="tb_exercise" />
+    </AssociationSet>
+    <AssociationSet Name="tb_person_exercise_fk2" Association="Self.tb_person_exercise_fk2">
+      <End Role="tb_exercise" EntitySet="tb_exercise" />
+      <End Role="tb_person_exercise" EntitySet="tb_person_exercise" />
+    </AssociationSet>
+    <AssociationSet Name="tb_person_exercise_fk1" Association="Self.tb_person_exercise_fk1">
+      <End Role="tb_person" EntitySet="tb_person" />
+      <End Role="tb_person_exercise" EntitySet="tb_person_exercise" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

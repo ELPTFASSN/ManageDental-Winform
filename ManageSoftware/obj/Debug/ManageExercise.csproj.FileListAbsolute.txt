@@ -1,0 +1,71 @@
+C:\Users\NguyenNgoc\Desktop\Phan mem tap luyen\ManagerPartient\ManagerPartient\obj\Debug\ManagerPartient.CustomControl.ButtonFunction.resources
+C:\Users\NguyenNgoc\Desktop\Phan mem tap luyen\ManagerPartient\ManagerPartient\obj\Debug\ManagerPartient.CustomControl.ButtonMenuBar.resources
+C:\Users\NguyenNgoc\Desktop\Phan mem tap luyen\ManagerPartient\ManagerPartient\obj\Debug\ManagerPartient.CustomControl.FormLoad.resources
+C:\Users\NguyenNgoc\Desktop\Phan mem tap luyen\ManagerPartient\ManagerPartient\obj\Debug\ManagerPartient.FormBanner.resources
+C:\Users\NguyenNgoc\Desktop\Phan mem tap luyen\ManagerPartient\ManagerPartient\obj\Debug\ManagerPartient.FormMain.resources
+C:\Users\NguyenNgoc\Desktop\Phan mem tap luyen\ManagerPartient\ManagerPartient\obj\Debug\ManagerPartient.Gui.FormDialogMain.resources
+C:\Users\NguyenNgoc\Desktop\Phan mem tap luyen\ManagerPartient\ManagerPartient\obj\Debug\ManagerPartient.Gui.AboutMe.resources
+C:\Users\NguyenNgoc\Desktop\Phan mem tap luyen\ManagerPartient\ManagerPartient\obj\Debug\ManagerPartient.Gui.PanelBackupRestore.resources
+C:\Users\NguyenNgoc\Desktop\Phan mem tap luyen\ManagerPartient\ManagerPartient\obj\Debug\ManagerPartient.Gui.PanelFunction.resources
+C:\Users\NguyenNgoc\Desktop\Phan mem tap luyen\ManagerPartient\ManagerPartient\obj\Debug\ManagerPartient.Gui.PanelHome.resources
+C:\Users\NguyenNgoc\Desktop\Phan mem tap luyen\ManagerPartient\ManagerPartient\obj\Debug\ManagerPartient.Gui.PanelListPatient.resources
+C:\Users\NguyenNgoc\Desktop\Phan mem tap luyen\ManagerPartient\ManagerPartient\obj\Debug\ManagerPartient.Gui.PanelCreatePatient.resources
+C:\Users\NguyenNgoc\Desktop\Phan mem tap luyen\ManagerPartient\ManagerPartient\obj\Debug\ManagerPartient.Properties.Resources.resources
+C:\Users\NguyenNgoc\Desktop\Phan mem tap luyen\ManagerPartient\ManagerPartient\obj\Debug\ManageExercise.csproj.GenerateResource.Cache
+C:\Users\NguyenNgoc\Desktop\Phan mem tap luyen\ManagerPartient\ManagerPartient\obj\Debug\ManagerPartient.exe
+C:\Users\NguyenNgoc\Desktop\Phan mem tap luyen\ManagerPartient\ManagerPartient\obj\Debug\ManagerPartient.pdb
+C:\Users\NguyenNgoc\Desktop\Phan mem tap luyen\ManagerPartient\ManagerPartient\obj\Debug\ManageExercise.csprojResolveAssemblyReference.cache
+C:\Users\NguyenNgoc\Desktop\Phan mem tap luyen\ManagerPartient\ManagerPartient\obj\Debug\ManagerPartient.Gui.CreateExercise.resources
+C:\Users\NguyenNgoc\Desktop\Phan mem tap luyen\ManagerPartient\ManagerPartient\obj\Debug\ManagerPartient.Gui.TutorialExercise.resources
+C:\Users\NguyenNgoc\Desktop\Phan mem tap luyen\ManagerPartient\ManagerPartient\obj\Debug\ManagerPartient.Gui.ConfigPractice.resources
+C:\Users\NguyenNgoc\Desktop\Phan mem tap luyen\ManageSoftware\obj\Debug\ManageSoftware.Properties.Resources.resources
+C:\Users\NguyenNgoc\Desktop\Phan mem tap luyen\ManageSoftware\obj\Debug\ManageExercise.csproj.GenerateResource.Cache
+E:\Debug\ManageSoftware.exe.config
+E:\Debug\ManageSoftware.exe
+E:\Debug\ManageSoftware.pdb
+C:\Users\NguyenNgoc\Desktop\Phan mem tap luyen\ManageSoftware\obj\Debug\ManageSoftware.CustomControl.ButtonFunction.resources
+C:\Users\NguyenNgoc\Desktop\Phan mem tap luyen\ManageSoftware\obj\Debug\ManageSoftware.CustomControl.ButtonMenuBar.resources
+C:\Users\NguyenNgoc\Desktop\Phan mem tap luyen\ManageSoftware\obj\Debug\ManageSoftware.CustomControl.FormLoad.resources
+C:\Users\NguyenNgoc\Desktop\Phan mem tap luyen\ManageSoftware\obj\Debug\ManageSoftware.FormBanner.resources
+C:\Users\NguyenNgoc\Desktop\Phan mem tap luyen\ManageSoftware\obj\Debug\ManageSoftware.FormMain.resources
+C:\Users\NguyenNgoc\Desktop\Phan mem tap luyen\ManageSoftware\obj\Debug\ManageSoftware.Gui.FormDialogMain.resources
+C:\Users\NguyenNgoc\Desktop\Phan mem tap luyen\ManageSoftware\obj\Debug\ManageSoftware.Gui.AboutMe.resources
+C:\Users\NguyenNgoc\Desktop\Phan mem tap luyen\ManageSoftware\obj\Debug\ManageSoftware.Gui.ConfigPractice.resources
+C:\Users\NguyenNgoc\Desktop\Phan mem tap luyen\ManageSoftware\obj\Debug\ManageSoftware.Gui.CreateExercise.resources
+C:\Users\NguyenNgoc\Desktop\Phan mem tap luyen\ManageSoftware\obj\Debug\ManageSoftware.Gui.PanelBackupRestore.resources
+C:\Users\NguyenNgoc\Desktop\Phan mem tap luyen\ManageSoftware\obj\Debug\ManageSoftware.Gui.PanelFunction.resources
+C:\Users\NguyenNgoc\Desktop\Phan mem tap luyen\ManageSoftware\obj\Debug\ManageSoftware.Gui.PanelHome.resources
+C:\Users\NguyenNgoc\Desktop\Phan mem tap luyen\ManageSoftware\obj\Debug\ManageSoftware.Gui.PanelListPatient.resources
+C:\Users\NguyenNgoc\Desktop\Phan mem tap luyen\ManageSoftware\obj\Debug\ManageSoftware.Gui.PanelCreatePatient.resources
+C:\Users\NguyenNgoc\Desktop\Phan mem tap luyen\ManageSoftware\obj\Debug\ManageSoftware.Gui.TutorialExercise.resources
+C:\Users\NguyenNgoc\Desktop\Phan mem tap luyen\ManageSoftware\obj\Debug\ManageSoftware.exe
+C:\Users\NguyenNgoc\Desktop\Phan mem tap luyen\ManageSoftware\obj\Debug\ManageSoftware.pdb
+C:\Users\NguyenNgoc\Desktop\Phan mem tap luyen\ManageSoftware\obj\Debug\ManageSoftware.Gui.SettingPortCOM.resources
+C:\Users\NguyenNgoc\Desktop\Nhakhoaso\ManageSoftware\obj\Debug\ManageSoftware.exe
+C:\Users\NguyenNgoc\Desktop\Nhakhoaso\ManageSoftware\obj\Debug\ManageSoftware.pdb
+C:\Users\NguyenNgoc\Desktop\Nhakhoaso\ManageSoftware\obj\Debug\ManageExercise.csprojResolveAssemblyReference.cache
+C:\Users\NguyenNgoc\Desktop\Nhakhoaso\ManageSoftware\obj\Debug\ManageSoftware.CustomControl.ButtonFunction.resources
+C:\Users\NguyenNgoc\Desktop\Nhakhoaso\ManageSoftware\obj\Debug\ManageSoftware.CustomControl.ButtonMenuBar.resources
+C:\Users\NguyenNgoc\Desktop\Nhakhoaso\ManageSoftware\obj\Debug\ManageSoftware.CustomControl.FormLoad.resources
+C:\Users\NguyenNgoc\Desktop\Nhakhoaso\ManageSoftware\obj\Debug\ManageSoftware.FormBanner.resources
+C:\Users\NguyenNgoc\Desktop\Nhakhoaso\ManageSoftware\obj\Debug\ManageSoftware.FormMain.resources
+C:\Users\NguyenNgoc\Desktop\Nhakhoaso\ManageSoftware\obj\Debug\ManageSoftware.Gui.FormDialogMain.resources
+C:\Users\NguyenNgoc\Desktop\Nhakhoaso\ManageSoftware\obj\Debug\ManageSoftware.Gui.AboutMe.resources
+C:\Users\NguyenNgoc\Desktop\Nhakhoaso\ManageSoftware\obj\Debug\ManageSoftware.Gui.ConfigPractice.resources
+C:\Users\NguyenNgoc\Desktop\Nhakhoaso\ManageSoftware\obj\Debug\ManageSoftware.Gui.CreateExercise.resources
+C:\Users\NguyenNgoc\Desktop\Nhakhoaso\ManageSoftware\obj\Debug\ManageSoftware.Gui.PanelBackupRestore.resources
+C:\Users\NguyenNgoc\Desktop\Nhakhoaso\ManageSoftware\obj\Debug\ManageSoftware.Gui.PanelFunction.resources
+C:\Users\NguyenNgoc\Desktop\Nhakhoaso\ManageSoftware\obj\Debug\ManageSoftware.Gui.PanelHome.resources
+C:\Users\NguyenNgoc\Desktop\Nhakhoaso\ManageSoftware\obj\Debug\ManageSoftware.Gui.PanelListPatient.resources
+C:\Users\NguyenNgoc\Desktop\Nhakhoaso\ManageSoftware\obj\Debug\ManageSoftware.Gui.PanelCreatePatient.resources
+C:\Users\NguyenNgoc\Desktop\Nhakhoaso\ManageSoftware\obj\Debug\ManageSoftware.Gui.SettingPortCOM.resources
+C:\Users\NguyenNgoc\Desktop\Nhakhoaso\ManageSoftware\obj\Debug\ManageSoftware.Gui.TutorialExercise.resources
+C:\Users\NguyenNgoc\Desktop\Nhakhoaso\ManageSoftware\obj\Debug\ManageSoftware.Properties.Resources.resources
+C:\Users\NguyenNgoc\Desktop\Nhakhoaso\ManageSoftware\obj\Debug\ManageExercise.csproj.GenerateResource.Cache
+C:\Users\NguyenNgoc\Desktop\Nhakhoaso\ManageSoftware\bin\Debug\ManageSoftware.exe.config
+C:\Users\NguyenNgoc\Desktop\Nhakhoaso\ManageSoftware\bin\Debug\ManageSoftware.exe
+C:\Users\NguyenNgoc\Desktop\Nhakhoaso\ManageSoftware\bin\Debug\ManageSoftware.pdb
+C:\Users\NguyenNgoc\Desktop\Nhakhoaso\ManageSoftware\bin\Debug\EntityFramework.dll
+C:\Users\NguyenNgoc\Desktop\Nhakhoaso\ManageSoftware\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\NguyenNgoc\Desktop\Nhakhoaso\ManageSoftware\bin\Debug\EntityFramework.xml
+C:\Users\NguyenNgoc\Desktop\Nhakhoaso\ManageSoftware\bin\Debug\EntityFramework.SqlServer.xml

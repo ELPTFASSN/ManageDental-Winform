@@ -1,0 +1,14 @@
+C:\Users\NguyenNgoc\Desktop\Phan mem nha khoa\ManagerPartient\TESTAPP\bin\Debug\TESTAPP.exe.config
+C:\Users\NguyenNgoc\Desktop\Phan mem nha khoa\ManagerPartient\TESTAPP\bin\Debug\TESTAPP.exe
+C:\Users\NguyenNgoc\Desktop\Phan mem nha khoa\ManagerPartient\TESTAPP\bin\Debug\TESTAPP.pdb
+C:\Users\NguyenNgoc\Desktop\Phan mem nha khoa\ManagerPartient\TESTAPP\obj\Debug\TESTAPP.csprojResolveAssemblyReference.cache
+C:\Users\NguyenNgoc\Desktop\Phan mem nha khoa\ManagerPartient\TESTAPP\obj\Debug\TESTAPP.Form4.resources
+C:\Users\NguyenNgoc\Desktop\Phan mem nha khoa\ManagerPartient\TESTAPP\obj\Debug\TESTAPP.csproj.GenerateResource.Cache
+C:\Users\NguyenNgoc\Desktop\Phan mem nha khoa\ManagerPartient\TESTAPP\obj\Debug\TESTAPP.exe
+C:\Users\NguyenNgoc\Desktop\Phan mem nha khoa\ManagerPartient\TESTAPP\obj\Debug\TESTAPP.pdb
+C:\Users\NguyenNgoc\Desktop\Nhakhoaso\TESTAPP\bin\Debug\TESTAPP.exe.config
+C:\Users\NguyenNgoc\Desktop\Nhakhoaso\TESTAPP\bin\Debug\TESTAPP.exe
+C:\Users\NguyenNgoc\Desktop\Nhakhoaso\TESTAPP\bin\Debug\TESTAPP.pdb
+C:\Users\NguyenNgoc\Desktop\Nhakhoaso\TESTAPP\obj\Debug\TESTAPP.csprojResolveAssemblyReference.cache
+C:\Users\NguyenNgoc\Desktop\Nhakhoaso\TESTAPP\obj\Debug\TESTAPP.exe
+C:\Users\NguyenNgoc\Desktop\Nhakhoaso\TESTAPP\obj\Debug\TESTAPP.pdb

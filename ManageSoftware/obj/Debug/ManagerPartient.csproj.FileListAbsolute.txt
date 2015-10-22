@@ -1,0 +1,56 @@
+C:\Users\NguyenNgoc\Desktop\SEM3_ProjectASP.NET\ManagerPartient\ManagerPartient\bin\Debug\ManagerPartient.exe.config
+C:\Users\NguyenNgoc\Desktop\SEM3_ProjectASP.NET\ManagerPartient\ManagerPartient\bin\Debug\ManagerPartient.exe
+C:\Users\NguyenNgoc\Desktop\SEM3_ProjectASP.NET\ManagerPartient\ManagerPartient\bin\Debug\ManagerPartient.pdb
+C:\Users\NguyenNgoc\Desktop\SEM3_ProjectASP.NET\ManagerPartient\ManagerPartient\obj\Debug\ManagerPartient.frMain.resources
+C:\Users\NguyenNgoc\Desktop\SEM3_ProjectASP.NET\ManagerPartient\ManagerPartient\obj\Debug\ManagerPartient.Gui.frSearch.resources
+C:\Users\NguyenNgoc\Desktop\SEM3_ProjectASP.NET\ManagerPartient\ManagerPartient\obj\Debug\ManagerPartient.Properties.Resources.resources
+C:\Users\NguyenNgoc\Desktop\SEM3_ProjectASP.NET\ManagerPartient\ManagerPartient\obj\Debug\ManagerPartient.csproj.GenerateResource.Cache
+C:\Users\NguyenNgoc\Desktop\SEM3_ProjectASP.NET\ManagerPartient\ManagerPartient\obj\Debug\ManagerPartient.exe
+C:\Users\NguyenNgoc\Desktop\SEM3_ProjectASP.NET\ManagerPartient\ManagerPartient\obj\Debug\ManagerPartient.pdb
+C:\Users\NguyenNgoc\Desktop\SEM3_ProjectASP.NET\ManagerPartient\ManagerPartient\obj\Debug\ManagerPartient.Gui.frCreatePatient.resources
+C:\Users\NguyenNgoc\Desktop\SEM3_ProjectASP.NET\ManagerPartient\ManagerPartient\obj\Debug\ManagerPartient.csprojResolveAssemblyReference.cache
+C:\Users\NguyenNgoc\Desktop\Phan mem nha khoa\ManagerPartient\ManagerPartient\bin\Debug\ManagerPartient.exe.config
+C:\Users\NguyenNgoc\Desktop\Phan mem nha khoa\ManagerPartient\ManagerPartient\bin\Debug\ManagerPartient.exe
+C:\Users\NguyenNgoc\Desktop\Phan mem nha khoa\ManagerPartient\ManagerPartient\bin\Debug\ManagerPartient.pdb
+C:\Users\NguyenNgoc\Desktop\Phan mem nha khoa\ManagerPartient\ManagerPartient\bin\Debug\EntityFramework.dll
+C:\Users\NguyenNgoc\Desktop\Phan mem nha khoa\ManagerPartient\ManagerPartient\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\NguyenNgoc\Desktop\Phan mem nha khoa\ManagerPartient\ManagerPartient\bin\Debug\EntityFramework.xml
+C:\Users\NguyenNgoc\Desktop\Phan mem nha khoa\ManagerPartient\ManagerPartient\bin\Debug\EntityFramework.SqlServer.xml
+E:\ManagerPartient.exe.config
+E:\Debug\ManagerPartient.exe
+C:\Users\NguyenNgoc\Desktop\Phan mem nha khoa\ManagerPartient\ManagerPartient\obj\Debug\ManagerPartient.CustomControl.ButtonFunction.resources
+C:\Users\NguyenNgoc\Desktop\Phan mem nha khoa\ManagerPartient\ManagerPartient\obj\Debug\ManagerPartient.CustomControl.ButtonMenuBar.resources
+C:\Users\NguyenNgoc\Desktop\Phan mem nha khoa\ManagerPartient\ManagerPartient\obj\Debug\ManagerPartient.CustomControl.FormLoad.resources
+C:\Users\NguyenNgoc\Desktop\Phan mem nha khoa\ManagerPartient\ManagerPartient\obj\Debug\ManagerPartient.FormBanner.resources
+C:\Users\NguyenNgoc\Desktop\Phan mem nha khoa\ManagerPartient\ManagerPartient\obj\Debug\ManagerPartient.FormMain.resources
+C:\Users\NguyenNgoc\Desktop\Phan mem nha khoa\ManagerPartient\ManagerPartient\obj\Debug\ManagerPartient.Gui.FormDialogMain.resources
+C:\Users\NguyenNgoc\Desktop\Phan mem nha khoa\ManagerPartient\ManagerPartient\obj\Debug\ManagerPartient.Gui.AboutMe.resources
+C:\Users\NguyenNgoc\Desktop\Phan mem nha khoa\ManagerPartient\ManagerPartient\obj\Debug\ManagerPartient.Gui.PanelBackupRestore.resources
+C:\Users\NguyenNgoc\Desktop\Phan mem nha khoa\ManagerPartient\ManagerPartient\obj\Debug\ManagerPartient.Gui.PanelFunction.resources
+C:\Users\NguyenNgoc\Desktop\Phan mem nha khoa\ManagerPartient\ManagerPartient\obj\Debug\ManagerPartient.Gui.PanelHome.resources
+C:\Users\NguyenNgoc\Desktop\Phan mem nha khoa\ManagerPartient\ManagerPartient\obj\Debug\ManagerPartient.Gui.PanelListPatient.resources
+C:\Users\NguyenNgoc\Desktop\Phan mem nha khoa\ManagerPartient\ManagerPartient\obj\Debug\ManagerPartient.Gui.PanelCreatePatient.resources
+C:\Users\NguyenNgoc\Desktop\Phan mem nha khoa\ManagerPartient\ManagerPartient\obj\Debug\ManagerPartient.Properties.Resources.resources
+C:\Users\NguyenNgoc\Desktop\Phan mem nha khoa\ManagerPartient\ManagerPartient\obj\Debug\ManagerPartient.csproj.GenerateResource.Cache
+C:\Users\NguyenNgoc\Desktop\Phan mem nha khoa\ManagerPartient\ManagerPartient\obj\Debug\ManagerPartient.exe
+C:\Users\NguyenNgoc\Desktop\Phan mem nha khoa\ManagerPartient\ManagerPartient\obj\Debug\ManagerPartient.pdb
+E:\Debug\ManagerPartient.exe.config
+E:\Debug\ManagerPartient.pdb
+C:\Users\NguyenNgoc\Desktop\Phan mem nha khoa\ManagerPartient\ManagerPartient\obj\Debug\ManagerPartient.csprojResolveAssemblyReference.cache
+C:\Users\NguyenNgoc\Desktop\Phan mem tap luyen\ManagerPartient\ManagerPartient\obj\Debug\ManagerPartient.exe
+C:\Users\NguyenNgoc\Desktop\Phan mem tap luyen\ManagerPartient\ManagerPartient\obj\Debug\ManagerPartient.pdb
+C:\Users\NguyenNgoc\Desktop\Phan mem tap luyen\ManagerPartient\ManagerPartient\obj\Debug\ManagerPartient.CustomControl.ButtonFunction.resources
+C:\Users\NguyenNgoc\Desktop\Phan mem tap luyen\ManagerPartient\ManagerPartient\obj\Debug\ManagerPartient.CustomControl.ButtonMenuBar.resources
+C:\Users\NguyenNgoc\Desktop\Phan mem tap luyen\ManagerPartient\ManagerPartient\obj\Debug\ManagerPartient.CustomControl.FormLoad.resources
+C:\Users\NguyenNgoc\Desktop\Phan mem tap luyen\ManagerPartient\ManagerPartient\obj\Debug\ManagerPartient.FormBanner.resources
+C:\Users\NguyenNgoc\Desktop\Phan mem tap luyen\ManagerPartient\ManagerPartient\obj\Debug\ManagerPartient.FormMain.resources
+C:\Users\NguyenNgoc\Desktop\Phan mem tap luyen\ManagerPartient\ManagerPartient\obj\Debug\ManagerPartient.Gui.FormDialogMain.resources
+C:\Users\NguyenNgoc\Desktop\Phan mem tap luyen\ManagerPartient\ManagerPartient\obj\Debug\ManagerPartient.Gui.AboutMe.resources
+C:\Users\NguyenNgoc\Desktop\Phan mem tap luyen\ManagerPartient\ManagerPartient\obj\Debug\ManagerPartient.Gui.PanelBackupRestore.resources
+C:\Users\NguyenNgoc\Desktop\Phan mem tap luyen\ManagerPartient\ManagerPartient\obj\Debug\ManagerPartient.Gui.PanelFunction.resources
+C:\Users\NguyenNgoc\Desktop\Phan mem tap luyen\ManagerPartient\ManagerPartient\obj\Debug\ManagerPartient.Gui.PanelHome.resources
+C:\Users\NguyenNgoc\Desktop\Phan mem tap luyen\ManagerPartient\ManagerPartient\obj\Debug\ManagerPartient.Gui.PanelListPatient.resources
+C:\Users\NguyenNgoc\Desktop\Phan mem tap luyen\ManagerPartient\ManagerPartient\obj\Debug\ManagerPartient.Gui.PanelCreatePatient.resources
+C:\Users\NguyenNgoc\Desktop\Phan mem tap luyen\ManagerPartient\ManagerPartient\obj\Debug\ManagerPartient.Properties.Resources.resources
+C:\Users\NguyenNgoc\Desktop\Phan mem tap luyen\ManagerPartient\ManagerPartient\obj\Debug\ManagerPartient.csproj.GenerateResource.Cache
+C:\Users\NguyenNgoc\Desktop\Phan mem tap luyen\ManagerPartient\ManagerPartient\obj\Debug\ManagerPartient.csprojResolveAssemblyReference.cache
