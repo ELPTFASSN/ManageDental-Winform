@@ -10,6 +10,7 @@ using ManagerPartient.Core;
 using System.Data.SqlClient;
 using ManagerPartient.ModelManage;
 using ManagerPartient.Controller;
+using ManagerPartient.CustomControl;
 
 namespace ManagerPartient.Gui
 {
@@ -32,44 +33,48 @@ namespace ManagerPartient.Gui
         }
 
         public void finish()
-        {
-            ExcelWriter.WriteExcelFile<tb_patient>(".xls", "E://sample.xls", PatientModelManage.Instance.FindAllPatients());
-            //if(rbRetoreAll.Checked)
-            //{
-            //    if (!txtPathFile.Text.Contains(".bak"))
-            //    {
-            //        MessageBox.Show("Đường dẫn lưu file không hợp lệ !");
-            //        txtPathFile.Text = folderBrowserDialog.SelectedPath + "//backup_" + DateTime.Now.ToFileTime().ToString() + extendFile;
-            //        return;
-            //    }
+        {            
+            if (rbRetoreAll.Checked)
+            {
+                if (!System.IO.Path.GetExtension(txtPathFile.Text).Equals(".bak"))
+                {
+                    MessageBox.Show("Vui lòng kiểm tra lại đường dẫn lưu file sao lưu !");
+                    txtPathFile.Text = folderBrowserDialog.SelectedPath + "//backup_" + DateTime.Now.ToFileTime().ToString() + extendFile;
+                    return;
+                }
 
-            //    ManagerPartient.CustomControl.FormLoad f = new ManagerPartient.CustomControl.FormLoad();
-            //    f.TopMost = true;
-            //    f.TopLevel = true;
-            //    f.Size = new System.Drawing.Size(SystemInformation.VirtualScreen.Width, SystemInformation.VirtualScreen.Height);
-            //    f.WindowState = FormWindowState.Maximized;
-            //    f.Show();
+                ManagerPartient.CustomControl.FormLoad f = new ManagerPartient.CustomControl.FormLoad();
+                f.TopMost = true;
+                f.TopLevel = true;
+                f.Size = new System.Drawing.Size(SystemInformation.VirtualScreen.Width, SystemInformation.VirtualScreen.Height);
+                f.WindowState = FormWindowState.Maximized;
+                f.Show();
 
-            //    con = new SqlConnection("Data Source=.\\SQLEXPRESS;Database=Master;data source=.; uid=sa; pwd=123456;");
-            //    con.Open();                
-            //    cmd = new SqlCommand("Backup database nks_db to disk='"+ txtPathFile.Text +"'", con);
-            //    cmd.ExecuteNonQuery();
-            //    con.Close();
+                con = new SqlConnection("Data Source=.\\SQLEXPRESS;Database=Master;data source=.; uid=sa; pwd=123456;");
+                con.Open();
+                cmd = new SqlCommand("Backup database nks_db to disk='" + txtPathFile.Text + "'", con);
+                cmd.ExecuteNonQuery();
+                con.Close();
 
-            //    f.Close();
-            //} else
-            //{
-            //    if (rbInsertData.Checked)
-            //    {
-            //        if (!txtPathFile.Text.Contains(".xls"))
-            //        {
-            //            MessageBox.Show("Đường dẫn lưu file không hợp lệ !");
-            //            txtPathFile.Text = folderBrowserDialog.SelectedPath + "//backup_" + DateTime.Now.ToFileTime().ToString() + extendFile;
-            //            return;
-            //        }
-            //        ExcelWriter.ExportExcel(UtillDataList.ToDataTable(PatientModelManage.Instance.FindAllPatients()), txtPathFile.Text, false);
-            //    }
-            //}
+                f.Close();
+                DialogResult dialogResult = MessageBoxEX.DialogMessageBox("Thông báo", "Sao lưu dữ liệu thành công", "File sao lưu được lưu ở " + txtPathFile.Text);
+                if (dialogResult.Equals(DialogResult.OK))
+                    this.ParentForm.Close();
+            }
+            else
+            {
+                if (rbInsertData.Checked)
+                {
+                    if (!System.IO.Path.GetExtension(txtPathFile.Text).Equals(".xls"))
+                    {
+                        MessageBox.Show("Vui lòng kiểm tra lại đường dẫn lưu file sao lưu !");
+                        txtPathFile.Text = folderBrowserDialog.SelectedPath + "//backup_" + DateTime.Now.ToFileTime().ToString() + extendFile;
+                        return;
+                    }
+                    ExcelWriter.WriteExcelFile<tb_patient>(txtPathFile.Text, PatientModelManage.Instance.FindAllPatients(), true);
+                    this.ParentForm.Close();
+                }
+            }
             
         }
 

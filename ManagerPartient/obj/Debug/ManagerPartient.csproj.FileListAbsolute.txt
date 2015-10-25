@@ -37,13 +37,7 @@ C:\Users\NguyenNgoc\Desktop\Phan mem nha khoa\ManagerPartient\ManagerPartient\ob
 E:\Debug\ManagerPartient.exe.config
 E:\Debug\ManagerPartient.pdb
 C:\Users\NguyenNgoc\Desktop\Phan mem nha khoa\ManagerPartient\ManagerPartient\obj\Debug\ManagerPartient.csprojResolveAssemblyReference.cache
-C:\Users\NguyenNgoc\Desktop\Nhakhoaso\ManagerPartient\bin\Debug\ManagerPartient.exe.config
-C:\Users\NguyenNgoc\Desktop\Nhakhoaso\ManagerPartient\bin\Debug\ManagerPartient.exe
-C:\Users\NguyenNgoc\Desktop\Nhakhoaso\ManagerPartient\bin\Debug\ManagerPartient.pdb
-C:\Users\NguyenNgoc\Desktop\Nhakhoaso\ManagerPartient\bin\Debug\EntityFramework.dll
-C:\Users\NguyenNgoc\Desktop\Nhakhoaso\ManagerPartient\bin\Debug\EntityFramework.SqlServer.dll
-C:\Users\NguyenNgoc\Desktop\Nhakhoaso\ManagerPartient\bin\Debug\EntityFramework.xml
-C:\Users\NguyenNgoc\Desktop\Nhakhoaso\ManagerPartient\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\NguyenNgoc\Desktop\Nhakhoaso\ManagerPartient\obj\Debug\ManagerPartient.exe
 C:\Users\NguyenNgoc\Desktop\Nhakhoaso\ManagerPartient\obj\Debug\ManagerPartient.CustomControl.ButtonFunction.resources
 C:\Users\NguyenNgoc\Desktop\Nhakhoaso\ManagerPartient\obj\Debug\ManagerPartient.CustomControl.ButtonMenuBar.resources
 C:\Users\NguyenNgoc\Desktop\Nhakhoaso\ManagerPartient\obj\Debug\ManagerPartient.CustomControl.FormLoad.resources
@@ -59,5 +53,12 @@ C:\Users\NguyenNgoc\Desktop\Nhakhoaso\ManagerPartient\obj\Debug\ManagerPartient.
 C:\Users\NguyenNgoc\Desktop\Nhakhoaso\ManagerPartient\obj\Debug\ManagerPartient.Gui.PanelCreatePatient.resources
 C:\Users\NguyenNgoc\Desktop\Nhakhoaso\ManagerPartient\obj\Debug\ManagerPartient.Properties.Resources.resources
 C:\Users\NguyenNgoc\Desktop\Nhakhoaso\ManagerPartient\obj\Debug\ManagerPartient.csproj.GenerateResource.Cache
-C:\Users\NguyenNgoc\Desktop\Nhakhoaso\ManagerPartient\obj\Debug\ManagerPartient.exe
 C:\Users\NguyenNgoc\Desktop\Nhakhoaso\ManagerPartient\obj\Debug\ManagerPartient.pdb
+C:\Users\NguyenNgoc\Desktop\Nhakhoaso\ManagerPartient\bin\Debug\ManagerPartient.exe.config
+C:\Users\NguyenNgoc\Desktop\Nhakhoaso\ManagerPartient\bin\Debug\ManagerPartient.exe
+C:\Users\NguyenNgoc\Desktop\Nhakhoaso\ManagerPartient\bin\Debug\ManagerPartient.pdb
+C:\Users\NguyenNgoc\Desktop\Nhakhoaso\ManagerPartient\bin\Debug\EntityFramework.dll
+C:\Users\NguyenNgoc\Desktop\Nhakhoaso\ManagerPartient\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\NguyenNgoc\Desktop\Nhakhoaso\ManagerPartient\bin\Debug\EntityFramework.xml
+C:\Users\NguyenNgoc\Desktop\Nhakhoaso\ManagerPartient\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\NguyenNgoc\Desktop\Nhakhoaso\ManagerPartient\obj\Debug\ManagerPartient.csprojResolveAssemblyReference.cache

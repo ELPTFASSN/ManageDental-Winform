@@ -40,17 +40,7 @@
             this.grbTimKiemPhienKham = new System.Windows.Forms.GroupBox();
             this.tableLayoutTimKiem = new System.Windows.Forms.TableLayoutPanel();
             this.ckTimKiemChinhXac = new System.Windows.Forms.CheckBox();
-            this.txtTuTimKiem = new ManagerPartient.CustomControl.TextBoxEX();
-            this.cbLoaiTimKiem = new ManagerPartient.CustomControl.ComboBoxEX();
-            this.btnTimKiem = new ManagerPartient.CustomControl.ButtonEX();
             this.tableLayoutTimKiemNangCao = new System.Windows.Forms.TableLayoutPanel();
-            this.txtTimTen = new ManagerPartient.CustomControl.TextBoxEX();
-            this.txtTimDiaChi = new ManagerPartient.CustomControl.TextBoxEX();
-            this.cbGioiTinh = new ManagerPartient.CustomControl.ComboBoxEX();
-            this.cbTuoi = new ManagerPartient.CustomControl.ComboBoxEX();
-            this.cbThoiGian = new ManagerPartient.CustomControl.ComboBoxEX();
-            this.btnTimKiemNangCao = new ManagerPartient.CustomControl.ButtonEX();
-            this.lblTimKiemNangCao = new ManagerPartient.CustomControl.LabelEX();
             this.panelBottom = new System.Windows.Forms.Panel();
             this.bindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -67,7 +57,19 @@
             this.btnPhienKhamMoi = new System.Windows.Forms.Button();
             this.tableLayoutMain = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutLeft = new System.Windows.Forms.TableLayoutPanel();
+            this.contextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.txtTuTimKiem = new ManagerPartient.CustomControl.TextBoxEX();
+            this.cbLoaiTimKiem = new ManagerPartient.CustomControl.ComboBoxEX();
+            this.btnTimKiem = new ManagerPartient.CustomControl.ButtonEX();
+            this.txtTimTen = new ManagerPartient.CustomControl.TextBoxEX();
+            this.txtTimDiaChi = new ManagerPartient.CustomControl.TextBoxEX();
+            this.cbGioiTinh = new ManagerPartient.CustomControl.ComboBoxEX();
+            this.cbTuoi = new ManagerPartient.CustomControl.ComboBoxEX();
+            this.cbThoiGian = new ManagerPartient.CustomControl.ComboBoxEX();
+            this.btnTimKiemNangCao = new ManagerPartient.CustomControl.ButtonEX();
+            this.lblTimKiemNangCao = new ManagerPartient.CustomControl.LabelEX();
             this.cbBacSy = new ManagerPartient.CustomControl.ComboBoxEX();
+            this.mnButton_Del = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.grvDSBenhNhan)).BeginInit();
             this.grbTimKiemPhienKham.SuspendLayout();
             this.tableLayoutTimKiem.SuspendLayout();
@@ -78,6 +80,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource)).BeginInit();
             this.tableLayoutMain.SuspendLayout();
             this.tableLayoutLeft.SuspendLayout();
+            this.contextMenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // grvDSBenhNhan
@@ -103,6 +106,7 @@
             this.grvDSBenhNhan.Size = new System.Drawing.Size(790, 478);
             this.grvDSBenhNhan.TabIndex = 3;
             this.grvDSBenhNhan.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grvDSBenhNhan_CellDoubleClick);
+            this.grvDSBenhNhan.CellMouseDown += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.grvDSBenhNhan_CellMouseDown);
             // 
             // PatientID_Col
             // 
@@ -173,48 +177,6 @@
             this.ckTimKiemChinhXac.Text = "Tìm kiếm chính xác";
             this.ckTimKiemChinhXac.UseVisualStyleBackColor = true;
             // 
-            // txtTuTimKiem
-            // 
-            this.txtTuTimKiem.ClearTextDefaultForcus = false;
-            this.txtTuTimKiem.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtTuTimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTuTimKiem.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.txtTuTimKiem.Location = new System.Drawing.Point(3, 3);
-            this.txtTuTimKiem.Name = "txtTuTimKiem";
-            this.txtTuTimKiem.Size = new System.Drawing.Size(188, 23);
-            this.txtTuTimKiem.TabIndex = 4;
-            this.txtTuTimKiem.Text = "Nhập từ cần tìm";
-            this.txtTuTimKiem.TextDefault = "Nhập từ cần tìm";
-            // 
-            // cbLoaiTimKiem
-            // 
-            this.cbLoaiTimKiem.DisplayMember = "Name";
-            this.cbLoaiTimKiem.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cbLoaiTimKiem.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbLoaiTimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbLoaiTimKiem.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.cbLoaiTimKiem.FormattingEnabled = true;
-            this.cbLoaiTimKiem.ItemHeight = 15;
-            this.cbLoaiTimKiem.Items = null;
-            this.cbLoaiTimKiem.Location = new System.Drawing.Point(3, 32);
-            this.cbLoaiTimKiem.Name = "cbLoaiTimKiem";
-            this.cbLoaiTimKiem.Size = new System.Drawing.Size(188, 23);
-            this.cbLoaiTimKiem.TabIndex = 5;
-            this.cbLoaiTimKiem.ValueMember = "Value";
-            // 
-            // btnTimKiem
-            // 
-            this.btnTimKiem.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnTimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTimKiem.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnTimKiem.Location = new System.Drawing.Point(3, 87);
-            this.btnTimKiem.Name = "btnTimKiem";
-            this.btnTimKiem.Size = new System.Drawing.Size(188, 24);
-            this.btnTimKiem.TabIndex = 6;
-            this.btnTimKiem.Text = "Tìm kiếm";
-            this.btnTimKiem.UseVisualStyleBackColor = true;
-            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
-            // 
             // tableLayoutTimKiemNangCao
             // 
             this.tableLayoutTimKiemNangCao.ColumnCount = 1;
@@ -238,109 +200,6 @@
             this.tableLayoutTimKiemNangCao.Size = new System.Drawing.Size(194, 174);
             this.tableLayoutTimKiemNangCao.TabIndex = 9;
             this.tableLayoutTimKiemNangCao.Visible = false;
-            // 
-            // txtTimTen
-            // 
-            this.txtTimTen.ClearTextDefaultForcus = false;
-            this.txtTimTen.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtTimTen.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTimTen.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.txtTimTen.Location = new System.Drawing.Point(3, 3);
-            this.txtTimTen.Name = "txtTimTen";
-            this.txtTimTen.Size = new System.Drawing.Size(188, 23);
-            this.txtTimTen.TabIndex = 0;
-            this.txtTimTen.Text = "Tên bệnh nhân";
-            this.txtTimTen.TextDefault = "Tên bệnh nhân";
-            // 
-            // txtTimDiaChi
-            // 
-            this.txtTimDiaChi.ClearTextDefaultForcus = false;
-            this.txtTimDiaChi.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtTimDiaChi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTimDiaChi.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.txtTimDiaChi.Location = new System.Drawing.Point(3, 32);
-            this.txtTimDiaChi.Name = "txtTimDiaChi";
-            this.txtTimDiaChi.Size = new System.Drawing.Size(188, 23);
-            this.txtTimDiaChi.TabIndex = 1;
-            this.txtTimDiaChi.Text = "Địa chỉ";
-            this.txtTimDiaChi.TextDefault = "Địa chỉ";
-            // 
-            // cbGioiTinh
-            // 
-            this.cbGioiTinh.DisplayMember = "Name";
-            this.cbGioiTinh.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cbGioiTinh.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbGioiTinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbGioiTinh.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.cbGioiTinh.FormattingEnabled = true;
-            this.cbGioiTinh.ItemHeight = 15;
-            this.cbGioiTinh.Items = null;
-            this.cbGioiTinh.Location = new System.Drawing.Point(3, 61);
-            this.cbGioiTinh.Name = "cbGioiTinh";
-            this.cbGioiTinh.Size = new System.Drawing.Size(188, 23);
-            this.cbGioiTinh.TabIndex = 1;
-            this.cbGioiTinh.ValueMember = "Value";
-            // 
-            // cbTuoi
-            // 
-            this.cbTuoi.DisplayMember = "Name";
-            this.cbTuoi.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cbTuoi.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbTuoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbTuoi.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.cbTuoi.FormattingEnabled = true;
-            this.cbTuoi.ItemHeight = 15;
-            this.cbTuoi.Items = null;
-            this.cbTuoi.Location = new System.Drawing.Point(3, 90);
-            this.cbTuoi.Name = "cbTuoi";
-            this.cbTuoi.Size = new System.Drawing.Size(188, 23);
-            this.cbTuoi.TabIndex = 2;
-            this.cbTuoi.ValueMember = "Value";
-            // 
-            // cbThoiGian
-            // 
-            this.cbThoiGian.DisplayMember = "Name";
-            this.cbThoiGian.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cbThoiGian.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbThoiGian.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbThoiGian.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.cbThoiGian.FormattingEnabled = true;
-            this.cbThoiGian.ItemHeight = 15;
-            this.cbThoiGian.Items = null;
-            this.cbThoiGian.Location = new System.Drawing.Point(3, 119);
-            this.cbThoiGian.Name = "cbThoiGian";
-            this.cbThoiGian.Size = new System.Drawing.Size(188, 23);
-            this.cbThoiGian.TabIndex = 10;
-            this.cbThoiGian.ValueMember = "Value";
-            // 
-            // btnTimKiemNangCao
-            // 
-            this.btnTimKiemNangCao.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnTimKiemNangCao.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTimKiemNangCao.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnTimKiemNangCao.Location = new System.Drawing.Point(3, 148);
-            this.btnTimKiemNangCao.Name = "btnTimKiemNangCao";
-            this.btnTimKiemNangCao.Size = new System.Drawing.Size(188, 23);
-            this.btnTimKiemNangCao.TabIndex = 12;
-            this.btnTimKiemNangCao.Text = "Tìm kiếm";
-            this.btnTimKiemNangCao.UseVisualStyleBackColor = true;
-            this.btnTimKiemNangCao.Click += new System.EventHandler(this.btnTimKiemNangCao_Click);
-            // 
-            // lblTimKiemNangCao
-            // 
-            this.lblTimKiemNangCao.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblTimKiemNangCao.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTimKiemNangCao.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lblTimKiemNangCao.Location = new System.Drawing.Point(6, 488);
-            this.lblTimKiemNangCao.Name = "lblTimKiemNangCao";
-            this.lblTimKiemNangCao.Size = new System.Drawing.Size(188, 34);
-            this.lblTimKiemNangCao.TabIndex = 4;
-            this.lblTimKiemNangCao.Text = "Tìm nâng cao";
-            this.lblTimKiemNangCao.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblTimKiemNangCao.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lblTimKiemNangCao_MouseClick);
-            this.lblTimKiemNangCao.MouseEnter += new System.EventHandler(this.lblTimKiemNangCao_MouseEnter);
-            this.lblTimKiemNangCao.MouseLeave += new System.EventHandler(this.lblTimKiemNangCao_MouseLeave);
             // 
             // panelBottom
             // 
@@ -514,6 +373,158 @@
             this.tableLayoutLeft.Size = new System.Drawing.Size(796, 522);
             this.tableLayoutLeft.TabIndex = 3;
             // 
+            // contextMenuStrip
+            // 
+            this.contextMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnButton_Del});
+            this.contextMenuStrip.Name = "contextMenuStrip";
+            this.contextMenuStrip.Size = new System.Drawing.Size(153, 48);
+            // 
+            // txtTuTimKiem
+            // 
+            this.txtTuTimKiem.ClearTextDefaultForcus = false;
+            this.txtTuTimKiem.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtTuTimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTuTimKiem.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.txtTuTimKiem.Location = new System.Drawing.Point(3, 3);
+            this.txtTuTimKiem.Name = "txtTuTimKiem";
+            this.txtTuTimKiem.Size = new System.Drawing.Size(188, 23);
+            this.txtTuTimKiem.TabIndex = 4;
+            this.txtTuTimKiem.Text = "Nhập từ cần tìm";
+            this.txtTuTimKiem.TextDefault = "Nhập từ cần tìm";
+            // 
+            // cbLoaiTimKiem
+            // 
+            this.cbLoaiTimKiem.DisplayMember = "Name";
+            this.cbLoaiTimKiem.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cbLoaiTimKiem.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbLoaiTimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbLoaiTimKiem.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.cbLoaiTimKiem.FormattingEnabled = true;
+            this.cbLoaiTimKiem.ItemHeight = 15;
+            this.cbLoaiTimKiem.Items = null;
+            this.cbLoaiTimKiem.Location = new System.Drawing.Point(3, 32);
+            this.cbLoaiTimKiem.Name = "cbLoaiTimKiem";
+            this.cbLoaiTimKiem.Size = new System.Drawing.Size(188, 23);
+            this.cbLoaiTimKiem.TabIndex = 5;
+            this.cbLoaiTimKiem.ValueMember = "Value";
+            // 
+            // btnTimKiem
+            // 
+            this.btnTimKiem.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnTimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTimKiem.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnTimKiem.Location = new System.Drawing.Point(3, 87);
+            this.btnTimKiem.Name = "btnTimKiem";
+            this.btnTimKiem.Size = new System.Drawing.Size(188, 24);
+            this.btnTimKiem.TabIndex = 6;
+            this.btnTimKiem.Text = "Tìm kiếm";
+            this.btnTimKiem.UseVisualStyleBackColor = true;
+            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
+            // 
+            // txtTimTen
+            // 
+            this.txtTimTen.ClearTextDefaultForcus = false;
+            this.txtTimTen.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtTimTen.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTimTen.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.txtTimTen.Location = new System.Drawing.Point(3, 3);
+            this.txtTimTen.Name = "txtTimTen";
+            this.txtTimTen.Size = new System.Drawing.Size(188, 23);
+            this.txtTimTen.TabIndex = 0;
+            this.txtTimTen.Text = "Tên bệnh nhân";
+            this.txtTimTen.TextDefault = "Tên bệnh nhân";
+            // 
+            // txtTimDiaChi
+            // 
+            this.txtTimDiaChi.ClearTextDefaultForcus = false;
+            this.txtTimDiaChi.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtTimDiaChi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTimDiaChi.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.txtTimDiaChi.Location = new System.Drawing.Point(3, 32);
+            this.txtTimDiaChi.Name = "txtTimDiaChi";
+            this.txtTimDiaChi.Size = new System.Drawing.Size(188, 23);
+            this.txtTimDiaChi.TabIndex = 1;
+            this.txtTimDiaChi.Text = "Địa chỉ";
+            this.txtTimDiaChi.TextDefault = "Địa chỉ";
+            // 
+            // cbGioiTinh
+            // 
+            this.cbGioiTinh.DisplayMember = "Name";
+            this.cbGioiTinh.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cbGioiTinh.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbGioiTinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbGioiTinh.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.cbGioiTinh.FormattingEnabled = true;
+            this.cbGioiTinh.ItemHeight = 15;
+            this.cbGioiTinh.Items = null;
+            this.cbGioiTinh.Location = new System.Drawing.Point(3, 61);
+            this.cbGioiTinh.Name = "cbGioiTinh";
+            this.cbGioiTinh.Size = new System.Drawing.Size(188, 23);
+            this.cbGioiTinh.TabIndex = 1;
+            this.cbGioiTinh.ValueMember = "Value";
+            // 
+            // cbTuoi
+            // 
+            this.cbTuoi.DisplayMember = "Name";
+            this.cbTuoi.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cbTuoi.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbTuoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbTuoi.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.cbTuoi.FormattingEnabled = true;
+            this.cbTuoi.ItemHeight = 15;
+            this.cbTuoi.Items = null;
+            this.cbTuoi.Location = new System.Drawing.Point(3, 90);
+            this.cbTuoi.Name = "cbTuoi";
+            this.cbTuoi.Size = new System.Drawing.Size(188, 23);
+            this.cbTuoi.TabIndex = 2;
+            this.cbTuoi.ValueMember = "Value";
+            // 
+            // cbThoiGian
+            // 
+            this.cbThoiGian.DisplayMember = "Name";
+            this.cbThoiGian.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cbThoiGian.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbThoiGian.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbThoiGian.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.cbThoiGian.FormattingEnabled = true;
+            this.cbThoiGian.ItemHeight = 15;
+            this.cbThoiGian.Items = null;
+            this.cbThoiGian.Location = new System.Drawing.Point(3, 119);
+            this.cbThoiGian.Name = "cbThoiGian";
+            this.cbThoiGian.Size = new System.Drawing.Size(188, 23);
+            this.cbThoiGian.TabIndex = 10;
+            this.cbThoiGian.ValueMember = "Value";
+            // 
+            // btnTimKiemNangCao
+            // 
+            this.btnTimKiemNangCao.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnTimKiemNangCao.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTimKiemNangCao.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnTimKiemNangCao.Location = new System.Drawing.Point(3, 148);
+            this.btnTimKiemNangCao.Name = "btnTimKiemNangCao";
+            this.btnTimKiemNangCao.Size = new System.Drawing.Size(188, 23);
+            this.btnTimKiemNangCao.TabIndex = 12;
+            this.btnTimKiemNangCao.Text = "Tìm kiếm";
+            this.btnTimKiemNangCao.UseVisualStyleBackColor = true;
+            this.btnTimKiemNangCao.Click += new System.EventHandler(this.btnTimKiemNangCao_Click);
+            // 
+            // lblTimKiemNangCao
+            // 
+            this.lblTimKiemNangCao.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblTimKiemNangCao.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTimKiemNangCao.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.lblTimKiemNangCao.Location = new System.Drawing.Point(6, 488);
+            this.lblTimKiemNangCao.Name = "lblTimKiemNangCao";
+            this.lblTimKiemNangCao.Size = new System.Drawing.Size(188, 34);
+            this.lblTimKiemNangCao.TabIndex = 4;
+            this.lblTimKiemNangCao.Text = "Tìm nâng cao";
+            this.lblTimKiemNangCao.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblTimKiemNangCao.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lblTimKiemNangCao_MouseClick);
+            this.lblTimKiemNangCao.MouseEnter += new System.EventHandler(this.lblTimKiemNangCao_MouseEnter);
+            this.lblTimKiemNangCao.MouseLeave += new System.EventHandler(this.lblTimKiemNangCao_MouseLeave);
+            // 
             // cbBacSy
             // 
             this.cbBacSy.DisplayMember = "Name";
@@ -528,6 +539,13 @@
             this.cbBacSy.Size = new System.Drawing.Size(191, 23);
             this.cbBacSy.TabIndex = 11;
             this.cbBacSy.ValueMember = "Value";
+            // 
+            // mnButton_Del
+            // 
+            this.mnButton_Del.Name = "mnButton_Del";
+            this.mnButton_Del.Size = new System.Drawing.Size(152, 22);
+            this.mnButton_Del.Text = "Xóa";
+            this.mnButton_Del.Click += new System.EventHandler(this.mnButton_Del_Click);
             // 
             // PanelListPatient
             // 
@@ -551,6 +569,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource)).EndInit();
             this.tableLayoutMain.ResumeLayout(false);
             this.tableLayoutLeft.ResumeLayout(false);
+            this.contextMenuStrip.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -589,5 +608,7 @@
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator1;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip;
+        private System.Windows.Forms.ToolStripMenuItem mnButton_Del;
     }
 }

@@ -57,6 +57,10 @@ namespace ManagerPartient.Gui
                 con.Close();
 
                 f.Close();
+
+                DialogResult dialogResult = MessageBoxEX.DialogMessageBox("Thông báo", "Khôi phục dữ liệu thành công", "");
+                if (dialogResult.Equals(DialogResult.OK))
+                    this.ParentForm.Close();
             }
             else
             {
@@ -81,7 +85,7 @@ namespace ManagerPartient.Gui
                         patient.Tel = tableSheet.Rows[i]["Tel"].ToString();
                         patient.Email = tableSheet.Rows[i]["Email"].ToString();
                         patient.Address = tableSheet.Rows[i]["Address"].ToString();
-                        patient.Note = tableSheet.Rows[i]["Note"].ToString();
+                        patient.Note = tableSheet.Rows[i]["_Note"].ToString();
 
                         // Kiểm tra dòng này đã là dòng trống chưa?
                         if (patient.PatientID.Equals("") && patient.FullName.Equals("") && patient.Address.Equals(""))
@@ -123,8 +127,7 @@ namespace ManagerPartient.Gui
 
                         // Ghi dữ liệu lỗi ra file Excel và hiển thị nó lên
                         string directoryPath = System.IO.Path.GetDirectoryName(txtPathFile.Text);
-                        ExcelWriter.ExportExcel(UtillDataList.ToDataTable(patientsNotVaild), directoryPath + "\\dataError.xls", true);
-
+                        ExcelWriter.WriteExcelFile<tb_patient>(directoryPath + "\\dataError.xls", patientsNotVaild, true);
                         if (result.Equals(DialogResult.Cancel))
                             return;
                     }

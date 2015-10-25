@@ -61,6 +61,17 @@ namespace ManagerPartient.Controller
             }
         }
 
+        public bool RemovePatient(string patientID)
+        {
+            using (database = new ModelEntities())
+            {
+                tb_patient patient = database.tb_patient.SingleOrDefault(p => p.PatientID == patientID);
+                database.tb_patient.Remove(patient);
+                database.SaveChanges();
+                return true;
+            }
+        }
+
         public tb_patient FindPatientByCode(String code)
         {
             using (database = new ModelEntities())

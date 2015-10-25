@@ -196,6 +196,8 @@ namespace ManagerPartient.Gui
 
         public void RefeshDataTable(List<tb_patient> _dataTable)
         {
+            //BindingList<tb_patient> bindlist = new BindingList<tb_patient>();
+
             if (bindingSource.Current != null)
             {
                 int offsetRecord = (int)bindingSource.Current;
@@ -315,6 +317,33 @@ namespace ManagerPartient.Gui
         }
 
         #endregion        
+
+        private void grvDSBenhNhan_CellMouseDown(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right)
+            {
+                int rowSelected = e.RowIndex;
+                if (e.RowIndex != -1)
+                {
+                    this.grvDSBenhNhan.ClearSelection();
+                    this.grvDSBenhNhan.Rows[rowSelected].Selected = true;
+                    this.contextMenuStrip.Show(this.grvDSBenhNhan, e.Location);
+                    this.contextMenuStrip.Show(Cursor.Position);
+                }
+            }
+        }
+
+        private void mnButton_Del_Click(object sender, EventArgs e)
+        {
+            tb_patient patient = (tb_patient)this.grvDSBenhNhan.CurrentRow.DataBoundItem;
+            bool flag = PatientModelManage.Instance.RemovePatient(patient.PatientID);
+            if(flag)
+            {
+                Int32 rowToDelete = this.grvDSBenhNhan.Rows.GetFirstRow(DataGridViewElementStates.Selected);
+                this.dataShow.RemoveAt(rowToDelete);
+                this.grvDSBenhNhan.ClearSelection();
+            }
+        }
         
     }
 }
