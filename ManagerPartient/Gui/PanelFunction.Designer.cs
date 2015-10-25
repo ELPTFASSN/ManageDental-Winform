@@ -120,6 +120,7 @@
             this.btnBackupData.Text = "Sao lưu";
             this.btnBackupData.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
             this.btnBackupData.UseVisualStyleBackColor = false;
+            this.btnBackupData.Click += new System.EventHandler(this.btnBackupData_Click);
             // 
             // btnSeting
             // 

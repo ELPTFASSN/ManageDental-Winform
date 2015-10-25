@@ -38,7 +38,7 @@ namespace ManagerPartient.Gui
 
         private void btnRestoreData_Click(object sender, EventArgs e)
         {
-            PanelBackupRestore panel = new PanelBackupRestore();
+            PanelRestoreData panel = new PanelRestoreData();
             panel.Dock = DockStyle.Fill;
             FormDialogMain form = new FormDialogMain(panel);
             form.Size = new Size(form.Bounds.Width, 550);
@@ -46,6 +46,18 @@ namespace ManagerPartient.Gui
             form.TitleForm = form.Text;
             form.DesciptionForm = "Phục hồi khôi phục lại dữ liệu đã sao lưu từ trước";
             form.ShowDialog();            
+        }
+
+        private void btnBackupData_Click(object sender, EventArgs e)
+        {
+            PanelBackupData panel = new PanelBackupData();
+            panel.Dock = DockStyle.Fill;
+            FormDialogMain form = new FormDialogMain(panel);
+            form.Size = new Size(form.Bounds.Width, 550);
+            form.Text = "Sao lưu dữ liệu";
+            form.TitleForm = form.Text;
+            form.DesciptionForm = "Sao lưu lại dữ liệu ở thời điểm hiện tại";
+            form.ShowDialog();
         }
     }
 }

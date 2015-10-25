@@ -81,6 +81,7 @@
     <Compile Include="Core\IFormDialogMain.cs" />
     <Compile Include="Core\IFormPanelChild.cs" />
     <Compile Include="Core\UtilImage.cs" />
+    <Compile Include="Core\UtillDataList.cs" />
     <Compile Include="CustomControl\ButtonEX.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -139,11 +140,17 @@
     <Compile Include="Gui\AboutMe.Designer.cs">
       <DependentUpon>AboutMe.cs</DependentUpon>
     </Compile>
-    <Compile Include="Gui\PanelBackupRestore.cs">
+    <Compile Include="Gui\PanelBackupData.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Gui\PanelBackupRestore.Designer.cs">
-      <DependentUpon>PanelBackupRestore.cs</DependentUpon>
+    <Compile Include="Gui\PanelBackupData.Designer.cs">
+      <DependentUpon>PanelBackupData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\PanelRestoreData.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Gui\PanelRestoreData.Designer.cs">
+      <DependentUpon>PanelRestoreData.cs</DependentUpon>
     </Compile>
     <Compile Include="Gui\PanelFunction.cs">
       <SubType>UserControl</SubType>
@@ -266,8 +273,11 @@
     <EmbeddedResource Include="Gui\AboutMe.resx">
       <DependentUpon>AboutMe.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Gui\PanelBackupRestore.resx">
-      <DependentUpon>PanelBackupRestore.cs</DependentUpon>
+    <EmbeddedResource Include="Gui\PanelBackupData.resx">
+      <DependentUpon>PanelBackupData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\PanelRestoreData.resx">
+      <DependentUpon>PanelRestoreData.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Gui\PanelFunction.resx">
       <DependentUpon>PanelFunction.cs</DependentUpon>

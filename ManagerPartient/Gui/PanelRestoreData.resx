@@ -132,10 +132,23 @@
   <metadata name="lblText2.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <metadata name="lblTextNote2.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="lblTextNote1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="lblTextNote3.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="lblText1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="lblText2.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="lblText2.Text" xml:space="preserve">
-    <value>Dữ liệu luôn là quan trọng và cần thiết tạo một bản sao trước đó, thời điểm cần sao lưu bạn có thể tự lựa chọn hoặc để hẹn thời điểm sao lưu tự động.  Công cụ này sẽ giúp bạn phục hồi dữ liệu từ các bản sao lưu trên máy tính mà bạn đã sao lưu từ trước đó.
-
-</value>
+    <value>Công cụ này hỗ trợ bạn khôi phục dữ liệu hoặc thêm dữ liệu từ bản sao lưu trước đó. Bạn có thể khôi phục lại hoàn toàn dữ liệu như ban đầu hoặc thêm một vài dữ liệu từ file Excel. Thời gian khôi phục sẽ nhanh chóng còn tùy thuộc vào số lượng dữ liệu cần khôi phục lại. Vì vậy hãy chờ đợi cho đến khi hoàn tất sẽ có thông báo.</value>
   </data>
   <metadata name="lblTextNote2.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
