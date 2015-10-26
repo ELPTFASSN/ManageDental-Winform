@@ -87,7 +87,7 @@ namespace ManagerPartient.Gui
             patient = _patient;
             txtMaSo.Text = patient.PatientID;
             txtHoTen.Text = patient.FullName;
-            cbGioiTinh.SelectedText = patient.Gender;
+            ((CustomControl.Item)cbGioiTinh.SelectedItem).Name = (patient.Gender != null && !patient.Gender.Equals(""))?patient.Gender:"Khác";
             txtDiDong.Text = patient.MobilePhone;
             if (patient.Birthday != null)
             {
@@ -174,7 +174,6 @@ namespace ManagerPartient.Gui
             // Kiểm tra dữ liệu vào hợp lệ
             if (CheckDataInput())
             {
-
                 if (patient == null)
                     flagSave = PatientModelManage.Instance.CreatePatient(GetData());
                 else flagSave = PatientModelManage.Instance.UpdatePatient(GetData());
@@ -201,6 +200,7 @@ namespace ManagerPartient.Gui
             txtDiDong.Text = "";
             txtHomThu.Text = "";
             txtGhiChu.Text = "";
+            AutoCodePatient();
         }
 
         public void AutoCodePatient()

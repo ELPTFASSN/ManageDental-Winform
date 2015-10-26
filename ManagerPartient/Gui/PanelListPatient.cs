@@ -196,14 +196,12 @@ namespace ManagerPartient.Gui
 
         public void RefeshDataTable(List<tb_patient> _dataTable)
         {
-            //BindingList<tb_patient> bindlist = new BindingList<tb_patient>();
-
             if (bindingSource.Current != null)
             {
                 int offsetRecord = (int)bindingSource.Current;
                 if (_dataTable == null)
                     _dataTable = PatientModelManage.Instance.FindAllPatients();
-                this.grvDSBenhNhan.DataSource = _dataTable.OrderBy(p => p.ID).Skip(offsetRecord).Take(pageSize).ToList();
+                this.grvDSBenhNhan.DataSource = new BindingList<tb_patient>(_dataTable.OrderBy(p => p.ID).Skip(offsetRecord).Take(pageSize).ToList());
 
                 foreach (DataGridViewRow row in grvDSBenhNhan.Rows)
                 {
@@ -229,8 +227,8 @@ namespace ManagerPartient.Gui
             {
                 if (_dataTable == null)
                     _dataTable = PatientModelManage.Instance.FindAllPatients();
-                this.grvDSBenhNhan.DataSource = _dataTable.OrderBy(p => p.ID).Skip(0).Take(pageSize).ToList();
-            }            
+                this.grvDSBenhNhan.DataSource = new BindingList<tb_patient>(_dataTable.OrderBy(p => p.ID).Skip(0).Take(pageSize).ToList());
+            }
         }
 
         private void lblTimKiemNangCao_MouseEnter(object sender, EventArgs e)
@@ -274,7 +272,7 @@ namespace ManagerPartient.Gui
                 form.TitleForm = "Chi tiết hồ sơ bệnh nhân";
                 form.DesciptionForm = "Hiển thị hồ sơ thông tin chi tiết của bệnh nhân";
                 form.ShowDialog();
-            }            
+            }
         }
 
         private void btnTimKiem_Click(object sender, EventArgs e)
@@ -300,7 +298,7 @@ namespace ManagerPartient.Gui
                         break;
                 }
             }
-            
+
             dataShow = patients;
             TotalPageDataTable(dataShow);
         }
@@ -308,15 +306,15 @@ namespace ManagerPartient.Gui
         private void btnTimKiemNangCao_Click(object sender, EventArgs e)
         {
             string name = txtTimTen.ForeColor.Equals(SystemColors.ControlDark) ? "" : txtTimTen.Text;
-            string address = txtTimDiaChi.ForeColor.Equals(SystemColors.ControlDark) ? "":txtTimDiaChi.Text;
-            string gender = cbGioiTinh.SelectedIndex==0?"":cbGioiTinh.SelectedValue.ToString();
+            string address = txtTimDiaChi.ForeColor.Equals(SystemColors.ControlDark) ? "" : txtTimDiaChi.Text;
+            string gender = cbGioiTinh.SelectedIndex == 0 ? "" : cbGioiTinh.SelectedValue.ToString();
             string age = cbTuoi.SelectedIndex == 0 ? "" : cbTuoi.SelectedValue.ToString();
             string time = cbThoiGian.SelectedIndex == 0 ? "" : cbThoiGian.SelectedValue.ToString();
             dataShow = PatientModelManage.Instance.FindPatientsByManyConds(name, address, gender, age, time);
             TotalPageDataTable(dataShow);
         }
 
-        #endregion        
+        #endregion
 
         private void grvDSBenhNhan_CellMouseDown(object sender, DataGridViewCellMouseEventArgs e)
         {
@@ -337,13 +335,13 @@ namespace ManagerPartient.Gui
         {
             tb_patient patient = (tb_patient)this.grvDSBenhNhan.CurrentRow.DataBoundItem;
             bool flag = PatientModelManage.Instance.RemovePatient(patient.PatientID);
-            if(flag)
+            if (flag)
             {
                 Int32 rowToDelete = this.grvDSBenhNhan.Rows.GetFirstRow(DataGridViewElementStates.Selected);
-                this.dataShow.RemoveAt(rowToDelete);
+                this.grvDSBenhNhan.Rows.RemoveAt(rowToDelete);
                 this.grvDSBenhNhan.ClearSelection();
             }
         }
-        
+
     }
 }

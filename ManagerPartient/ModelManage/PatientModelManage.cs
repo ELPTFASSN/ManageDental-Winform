@@ -11,7 +11,7 @@ namespace ManagerPartient.Controller
         /**
          * Variable Gobal
          **/
-        private ModelEntities database;
+        private ModelEntities dataContext;
         private static PatientModelManage instance;
 
         /**
@@ -29,21 +29,21 @@ namespace ManagerPartient.Controller
             }
         }
 
-        public PatientModelManage() { }
+        private PatientModelManage() 
+        {
+            dataContext = new ModelEntities();
+        }
 
         public bool CreatePatient(tb_patient _patient)
-        {
-            using (database = new ModelEntities())
-            {
-                database.tb_patient.Add(_patient);
-                database.SaveChanges();
-                return true;
-            }
+        {            
+            dataContext.tb_patient.Add(_patient);
+            dataContext.SaveChanges();
+            return true;
         }
 
         public bool UpdatePatient(tb_patient _patient)
         {
-            using (database = new ModelEntities())
+            using (ModelEntities database = new ModelEntities())
             {
                 tb_patient patient = database.tb_patient.SingleOrDefault(p => p.PatientID == _patient.PatientID);
                 patient.FullName = _patient.FullName;
@@ -63,7 +63,7 @@ namespace ManagerPartient.Controller
 
         public bool RemovePatient(string patientID)
         {
-            using (database = new ModelEntities())
+            using (ModelEntities database = new ModelEntities())
             {
                 tb_patient patient = database.tb_patient.SingleOrDefault(p => p.PatientID == patientID);
                 database.tb_patient.Remove(patient);
@@ -74,7 +74,7 @@ namespace ManagerPartient.Controller
 
         public tb_patient FindPatientByCode(String code)
         {
-            using (database = new ModelEntities())
+            using (ModelEntities database = new ModelEntities())
             {
                 return database.tb_patient.SingleOrDefault(p => p.PatientID == code);
             }
@@ -83,7 +83,7 @@ namespace ManagerPartient.Controller
         public List<tb_patient> FindPatientByCode(String code, bool exact)
         {
             List<tb_patient> list = null;
-            using (database = new ModelEntities())
+            using (ModelEntities database = new ModelEntities())
             {
                 if (!exact)
                     list = database.tb_patient.Where(p => p.PatientID.Contains(code)).ToList();
@@ -99,7 +99,7 @@ namespace ManagerPartient.Controller
 
         public List<tb_patient> FindPatientByName(String name, bool exact)
         {
-            using (database = new ModelEntities())
+            using (ModelEntities database = new ModelEntities())
             {
                 if (!exact)
                     return database.tb_patient.Where(p => p.FullName.Contains(name)).ToList();
@@ -110,7 +110,7 @@ namespace ManagerPartient.Controller
 
         public List<tb_patient> FindPatientByMobile(String mobile, bool exact)
         {
-            using (database = new ModelEntities())
+            using (ModelEntities database = new ModelEntities())
             {
                 if (!exact)
                     return database.tb_patient.Where(p => p.MobilePhone.Contains(mobile)).ToList();
@@ -121,7 +121,7 @@ namespace ManagerPartient.Controller
 
         public List<tb_patient> FindPatientByAddress(String address, bool exact)
         {
-            using (database = new ModelEntities())
+            using (ModelEntities database = new ModelEntities())
             {
                 if (!exact)
                     return database.tb_patient.Where(p => p.Address.Contains(address)).ToList();
@@ -132,7 +132,7 @@ namespace ManagerPartient.Controller
 
         public List<tb_patient> FindAllPatients()
         {
-            using (database = new ModelEntities())
+            using (ModelEntities database = new ModelEntities())
             {
                 return database.tb_patient.ToList();
             }
@@ -140,7 +140,7 @@ namespace ManagerPartient.Controller
 
         public List<tb_patient> FindPatientsByManyConds(String name, String address, String gender, String age, String time)
         {
-            using (database = new ModelEntities())
+            using (ModelEntities database = new ModelEntities())
             {
                 var query = database.tb_patient.AsQueryable();
                 if (name != null && !name.Equals(""))
@@ -177,7 +177,7 @@ namespace ManagerPartient.Controller
 
         public List<tb_profession> FindAllProfession()
         {
-            using (database = new ModelEntities())
+            using (ModelEntities database = new ModelEntities())
             {
                 return database.tb_profession.ToList();
             }
