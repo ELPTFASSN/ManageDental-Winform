@@ -333,14 +333,21 @@ namespace ManagerPartient.Gui
 
         private void mnButton_Del_Click(object sender, EventArgs e)
         {
-            tb_patient patient = (tb_patient)this.grvDSBenhNhan.CurrentRow.DataBoundItem;
-            bool flag = PatientModelManage.Instance.RemovePatient(patient.PatientID);
-            if (flag)
+            if (this.grvDSBenhNhan.CurrentRow != null)
             {
-                Int32 rowToDelete = this.grvDSBenhNhan.Rows.GetFirstRow(DataGridViewElementStates.Selected);
-                this.grvDSBenhNhan.Rows.RemoveAt(rowToDelete);
-                this.grvDSBenhNhan.ClearSelection();
-            }
+                tb_patient patient = (tb_patient)this.grvDSBenhNhan.CurrentRow.DataBoundItem;
+                DialogResult result = ManagerPartient.CustomControl.MessageBoxEX.DialogMessageBox("Thông báo", "Bạn chắc chắn muốn xóa bệnh nhân '" + patient.FullName + "' chứ?", "Dữ liệu xóa sẽ không thể lấy lại, bạn nên cân nhắc trước khi xóa");
+                if(result.Equals(DialogResult.OK))
+                {
+                    bool flag = PatientModelManage.Instance.RemovePatient(patient.PatientID);
+                    if (flag)
+                    {
+                        Int32 rowToDelete = this.grvDSBenhNhan.Rows.GetFirstRow(DataGridViewElementStates.Selected);
+                        this.grvDSBenhNhan.Rows.RemoveAt(rowToDelete);
+                        this.grvDSBenhNhan.ClearSelection();
+                    }
+                }                
+            }            
         }
 
     }

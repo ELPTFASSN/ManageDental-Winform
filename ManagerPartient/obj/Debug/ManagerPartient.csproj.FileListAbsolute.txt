@@ -37,12 +37,26 @@ C:\Users\NguyenNgoc\Desktop\Phan mem nha khoa\ManagerPartient\ManagerPartient\ob
 E:\Debug\ManagerPartient.exe.config
 E:\Debug\ManagerPartient.pdb
 C:\Users\NguyenNgoc\Desktop\Phan mem nha khoa\ManagerPartient\ManagerPartient\obj\Debug\ManagerPartient.csprojResolveAssemblyReference.cache
-C:\Users\NguyenNgoc\Desktop\Nhakhoaso\ManagerPartient\obj\Debug\ManagerPartient.exe
 C:\Users\NguyenNgoc\Desktop\Nhakhoaso\ManagerPartient\bin\Debug\ManagerPartient.exe.config
+C:\Users\NguyenNgoc\Desktop\Nhakhoaso\ManagerPartient\bin\Debug\ManagerPartient.exe.manifest
+C:\Users\NguyenNgoc\Desktop\Nhakhoaso\ManagerPartient\bin\Debug\ManagerPartient.application
 C:\Users\NguyenNgoc\Desktop\Nhakhoaso\ManagerPartient\bin\Debug\ManagerPartient.exe
 C:\Users\NguyenNgoc\Desktop\Nhakhoaso\ManagerPartient\bin\Debug\ManagerPartient.pdb
 C:\Users\NguyenNgoc\Desktop\Nhakhoaso\ManagerPartient\bin\Debug\EntityFramework.dll
 C:\Users\NguyenNgoc\Desktop\Nhakhoaso\ManagerPartient\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\NguyenNgoc\Desktop\Nhakhoaso\ManagerPartient\bin\Debug\Microsoft.CSharp.dll
+C:\Users\NguyenNgoc\Desktop\Nhakhoaso\ManagerPartient\bin\Debug\System.ComponentModel.DataAnnotations.dll
+C:\Users\NguyenNgoc\Desktop\Nhakhoaso\ManagerPartient\bin\Debug\System.Data.DataSetExtensions.dll
+C:\Users\NguyenNgoc\Desktop\Nhakhoaso\ManagerPartient\bin\Debug\System.Data.dll
+C:\Users\NguyenNgoc\Desktop\Nhakhoaso\ManagerPartient\bin\Debug\System.Data.Linq.dll
+C:\Users\NguyenNgoc\Desktop\Nhakhoaso\ManagerPartient\bin\Debug\System.Deployment.dll
+C:\Users\NguyenNgoc\Desktop\Nhakhoaso\ManagerPartient\bin\Debug\System.dll
+C:\Users\NguyenNgoc\Desktop\Nhakhoaso\ManagerPartient\bin\Debug\System.Drawing.dll
+C:\Users\NguyenNgoc\Desktop\Nhakhoaso\ManagerPartient\bin\Debug\System.Runtime.Serialization.dll
+C:\Users\NguyenNgoc\Desktop\Nhakhoaso\ManagerPartient\bin\Debug\System.Security.dll
+C:\Users\NguyenNgoc\Desktop\Nhakhoaso\ManagerPartient\bin\Debug\System.Windows.Forms.dll
+C:\Users\NguyenNgoc\Desktop\Nhakhoaso\ManagerPartient\bin\Debug\System.Xml.dll
+C:\Users\NguyenNgoc\Desktop\Nhakhoaso\ManagerPartient\bin\Debug\System.Xml.Linq.dll
 C:\Users\NguyenNgoc\Desktop\Nhakhoaso\ManagerPartient\bin\Debug\EntityFramework.xml
 C:\Users\NguyenNgoc\Desktop\Nhakhoaso\ManagerPartient\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\NguyenNgoc\Desktop\Nhakhoaso\ManagerPartient\obj\Debug\ManagerPartient.CustomControl.ButtonFunction.resources
@@ -60,4 +74,9 @@ C:\Users\NguyenNgoc\Desktop\Nhakhoaso\ManagerPartient\obj\Debug\ManagerPartient.
 C:\Users\NguyenNgoc\Desktop\Nhakhoaso\ManagerPartient\obj\Debug\ManagerPartient.Gui.PanelCreatePatient.resources
 C:\Users\NguyenNgoc\Desktop\Nhakhoaso\ManagerPartient\obj\Debug\ManagerPartient.Properties.Resources.resources
 C:\Users\NguyenNgoc\Desktop\Nhakhoaso\ManagerPartient\obj\Debug\ManagerPartient.csproj.GenerateResource.Cache
+C:\Users\NguyenNgoc\Desktop\Nhakhoaso\ManagerPartient\obj\Debug\ManagerPartient.TrustInfo.xml
+C:\Users\NguyenNgoc\Desktop\Nhakhoaso\ManagerPartient\obj\Debug\ManagerPartient.exe.manifest
+C:\Users\NguyenNgoc\Desktop\Nhakhoaso\ManagerPartient\obj\Debug\ManagerPartient.application
+C:\Users\NguyenNgoc\Desktop\Nhakhoaso\ManagerPartient\obj\Debug\ManagerPartient.exe
 C:\Users\NguyenNgoc\Desktop\Nhakhoaso\ManagerPartient\obj\Debug\ManagerPartient.pdb
+C:\Users\NguyenNgoc\Desktop\Nhakhoaso\ManagerPartient\obj\Debug\ManagerPartient.csprojResolveAssemblyReference.cache
