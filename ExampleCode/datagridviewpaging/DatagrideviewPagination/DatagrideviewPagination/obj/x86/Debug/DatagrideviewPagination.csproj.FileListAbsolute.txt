@@ -1,0 +1,9 @@
+d:\documents and settings\605820782\my documents\visual studio 2010\Projects\DatagrideviewPagination\DatagrideviewPagination\bin\Debug\DatagrideviewPagination.exe
+d:\documents and settings\605820782\my documents\visual studio 2010\Projects\DatagrideviewPagination\DatagrideviewPagination\bin\Debug\DatagrideviewPagination.pdb
+d:\documents and settings\605820782\my documents\visual studio 2010\Projects\DatagrideviewPagination\DatagrideviewPagination\obj\x86\Debug\ResolveAssemblyReference.cache
+d:\documents and settings\605820782\my documents\visual studio 2010\Projects\DatagrideviewPagination\DatagrideviewPagination\obj\x86\Debug\GenerateResource.read.1.tlog
+d:\documents and settings\605820782\my documents\visual studio 2010\Projects\DatagrideviewPagination\DatagrideviewPagination\obj\x86\Debug\GenerateResource.write.1.tlog
+d:\documents and settings\605820782\my documents\visual studio 2010\Projects\DatagrideviewPagination\DatagrideviewPagination\obj\x86\Debug\DatagrideviewPagination.exe
+d:\documents and settings\605820782\my documents\visual studio 2010\Projects\DatagrideviewPagination\DatagrideviewPagination\obj\x86\Debug\DatagrideviewPagination.pdb
+D:\documents and settings\605820782\My Documents\Visual Studio 2010\Projects\DatagrideviewPagination\DatagrideviewPagination\obj\x86\Debug\DatagridviewPagination.Form1.resources
+D:\documents and settings\605820782\My Documents\Visual Studio 2010\Projects\DatagrideviewPagination\DatagrideviewPagination\obj\x86\Debug\DatagridviewPagination.Properties.Resources.resources

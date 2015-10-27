@@ -71,7 +71,7 @@ namespace ManagerPartient.Gui
                         txtPathFile.Text = folderBrowserDialog.SelectedPath + "//backup_" + DateTime.Now.ToFileTime().ToString() + extendFile;
                         return;
                     }
-                    ExcelWriter.WriteExcelFile<tb_patient>(txtPathFile.Text, PatientModelManage.Instance.FindAllPatients(), true);
+                    ExcelWriter.WriteExcelFile<tb_patient>(txtPathFile.Text, PatientModelManage.Instance.FindAllPatients(), false);
                     this.ParentForm.Close();
                 }
             }

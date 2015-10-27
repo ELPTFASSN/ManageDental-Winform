@@ -1,0 +1,22 @@
+C:\Users\Quy\Documents\Visual Studio 2010\Projects\Communication RS232\Communication RS232\bin\Release\Communication RS232.exe
+C:\Users\Quy\Documents\Visual Studio 2010\Projects\Communication RS232\Communication RS232\bin\Release\Communication RS232.pdb
+C:\Users\Quy\Documents\Visual Studio 2010\Projects\Communication RS232\Communication RS232\bin\Release\ZedGraph.dll
+C:\Users\Quy\Documents\Visual Studio 2010\Projects\Communication RS232\Communication RS232\obj\x86\Release\Communication_RS232.Form1.resources
+C:\Users\Quy\Documents\Visual Studio 2010\Projects\Communication RS232\Communication RS232\obj\x86\Release\Communication_RS232.Form2.resources
+C:\Users\Quy\Documents\Visual Studio 2010\Projects\Communication RS232\Communication RS232\obj\x86\Release\Communication_RS232.Graph.resources
+C:\Users\Quy\Documents\Visual Studio 2010\Projects\Communication RS232\Communication RS232\obj\x86\Release\Communication_RS232.Properties.Resources.resources
+C:\Users\Quy\Documents\Visual Studio 2010\Projects\Communication RS232\Communication RS232\obj\x86\Release\Communication RS232.csproj.GenerateResource.Cache
+C:\Users\Quy\Documents\Visual Studio 2010\Projects\Communication RS232\Communication RS232\obj\x86\Release\Communication RS232.exe
+C:\Users\Quy\Documents\Visual Studio 2010\Projects\Communication RS232\Communication RS232\obj\x86\Release\Communication RS232.pdb
+C:\Users\HOANG VAN\Desktop\DONG AP\PC_Communication RS232\Communication RS232\bin\Release\Communication RS232.exe
+C:\Users\HOANG VAN\Desktop\DONG AP\PC_Communication RS232\Communication RS232\bin\Release\Communication RS232.pdb
+C:\Users\HOANG VAN\Desktop\DONG AP\PC_Communication RS232\Communication RS232\bin\Release\ZedGraph.dll
+C:\Users\HOANG VAN\Desktop\DONG AP\PC_Communication RS232\Communication RS232\obj\x86\Release\ResolveAssemblyReference.cache
+C:\Users\HOANG VAN\Desktop\DONG AP\PC_Communication RS232\Communication RS232\obj\x86\Release\Communication_RS232.Form1.resources
+C:\Users\HOANG VAN\Desktop\DONG AP\PC_Communication RS232\Communication RS232\obj\x86\Release\Communication_RS232.Form2.resources
+C:\Users\HOANG VAN\Desktop\DONG AP\PC_Communication RS232\Communication RS232\obj\x86\Release\Communication_RS232.Graph.resources
+C:\Users\HOANG VAN\Desktop\DONG AP\PC_Communication RS232\Communication RS232\obj\x86\Release\Communication_RS232.Properties.Resources.resources
+C:\Users\HOANG VAN\Desktop\DONG AP\PC_Communication RS232\Communication RS232\obj\x86\Release\GenerateResource.read.1.tlog
+C:\Users\HOANG VAN\Desktop\DONG AP\PC_Communication RS232\Communication RS232\obj\x86\Release\GenerateResource.write.1.tlog
+C:\Users\HOANG VAN\Desktop\DONG AP\PC_Communication RS232\Communication RS232\obj\x86\Release\Communication RS232.exe
+C:\Users\HOANG VAN\Desktop\DONG AP\PC_Communication RS232\Communication RS232\obj\x86\Release\Communication RS232.pdb

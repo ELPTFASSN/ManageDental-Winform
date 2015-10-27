@@ -39,6 +39,7 @@ namespace ManagerPartient.Gui
                     MessageBox.Show("File không hợp lệ !");
                     return;
                 }
+                
                 ManagerPartient.CustomControl.FormLoad f = new ManagerPartient.CustomControl.FormLoad();
                 f.TopMost = true;
                 f.TopLevel = true;
@@ -46,21 +47,36 @@ namespace ManagerPartient.Gui
                 f.WindowState = FormWindowState.Maximized;
                 f.Show();
 
-                con = new SqlConnection("Data Source=.\\SQLEXPRESS;Database=Master;data source=.; uid=sa; pwd=123456;");
-                con.Open();
-                cmd = new SqlCommand("ALTER DATABASE nks_db SET SINGLE_USER WITH ROLLBACK IMMEDIATE", con);
-                cmd.ExecuteNonQuery();
-                cmd = new SqlCommand("Restore database nks_db from disk='" + txtPathFile.Text + "'", con);
-                cmd.ExecuteNonQuery();
-                cmd = new SqlCommand("alter database nks_db set multi_user", con);
-                cmd.ExecuteNonQuery();
-                con.Close();
+                try
+                {
+                    con = new SqlConnection("Data Source=.\\SQLEXPRESS;Database=Master;data source=.; uid=sa; pwd=123456;");
+                    con.Open();
+                    cmd = new SqlCommand("ALTER DATABASE nks_db SET SINGLE_USER WITH ROLLBACK IMMEDIATE", con);
+                    cmd.ExecuteNonQuery();
+                    cmd = new SqlCommand("Restore database nks_db from disk='" + txtPathFile.Text + "'", con);
+                    cmd.ExecuteNonQuery();
+                    cmd = new SqlCommand("alter database nks_db set multi_user", con);
+                    cmd.ExecuteNonQuery();
+                    con.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                finally
+                {
+                    f.Close();
+                }
 
-                f.Close();
 
                 DialogResult dialogResult = MessageBoxEX.DialogMessageBox("Thông báo", "Khôi phục dữ liệu thành công", "");
                 if (dialogResult.Equals(DialogResult.OK))
+                {
                     this.ParentForm.Close();
+                    System.Diagnostics.Process.Start(Application.ExecutablePath); // to start new instance of application
+                    //Application.Exit();
+                    System.Diagnostics.Process.GetCurrentProcess().Kill();
+                }
             }
             else
             {

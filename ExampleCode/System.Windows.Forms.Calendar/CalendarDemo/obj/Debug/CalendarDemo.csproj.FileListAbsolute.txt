@@ -1,0 +1,10 @@
+C:\Users\NguyenNgoc\Desktop\System.Windows.Forms.Calendar\CalendarDemo\bin\Debug\CalendarDemo.exe
+C:\Users\NguyenNgoc\Desktop\System.Windows.Forms.Calendar\CalendarDemo\bin\Debug\CalendarDemo.pdb
+C:\Users\NguyenNgoc\Desktop\System.Windows.Forms.Calendar\CalendarDemo\bin\Debug\System.Windows.Forms.Calendar.dll
+C:\Users\NguyenNgoc\Desktop\System.Windows.Forms.Calendar\CalendarDemo\bin\Debug\System.Windows.Forms.Calendar.pdb
+C:\Users\NguyenNgoc\Desktop\System.Windows.Forms.Calendar\CalendarDemo\obj\Debug\CalendarDemo.csprojResolveAssemblyReference.cache
+C:\Users\NguyenNgoc\Desktop\System.Windows.Forms.Calendar\CalendarDemo\obj\Debug\CalendarDemo.DemoForm.resources
+C:\Users\NguyenNgoc\Desktop\System.Windows.Forms.Calendar\CalendarDemo\obj\Debug\CalendarDemo.Properties.Resources.resources
+C:\Users\NguyenNgoc\Desktop\System.Windows.Forms.Calendar\CalendarDemo\obj\Debug\CalendarDemo.csproj.GenerateResource.Cache
+C:\Users\NguyenNgoc\Desktop\System.Windows.Forms.Calendar\CalendarDemo\obj\Debug\CalendarDemo.exe
+C:\Users\NguyenNgoc\Desktop\System.Windows.Forms.Calendar\CalendarDemo\obj\Debug\CalendarDemo.pdb

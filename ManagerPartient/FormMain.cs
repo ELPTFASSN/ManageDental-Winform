@@ -169,7 +169,8 @@ namespace ManagerPartient
         private void frMain_FormClosed(object sender, FormClosedEventArgs e)
         {
             //this.Dispose();
-            Application.Exit();
+            //Application.Exit();
+            System.Diagnostics.Process.GetCurrentProcess().Kill();
         }
 
         private void lblNaviBar3_Click(object sender, EventArgs e)
