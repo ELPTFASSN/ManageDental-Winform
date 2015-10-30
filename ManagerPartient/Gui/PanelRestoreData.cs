@@ -20,7 +20,10 @@ namespace ManagerPartient.Gui
         public PanelRestoreData()
         {
             InitializeComponent();
-            openFileDialog.InitialDirectory = @"C:\";
+            string desktopPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+            if (!System.IO.Directory.Exists(desktopPath))
+                desktopPath = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetEntryAssembly().Location);
+            openFileDialog.InitialDirectory = @desktopPath;
             openFileDialog.Filter = "Restore Files|*.bak";
             openFileDialog.Title = "Vui lòng chọn file phục hồi";
         }
@@ -53,7 +56,7 @@ namespace ManagerPartient.Gui
                     con.Open();
                     cmd = new SqlCommand("ALTER DATABASE nks_db SET SINGLE_USER WITH ROLLBACK IMMEDIATE", con);
                     cmd.ExecuteNonQuery();
-                    cmd = new SqlCommand("Restore database nks_db from disk='" + txtPathFile.Text + "'", con);
+                    cmd = new SqlCommand("Restore database nks_db from disk='" + txtPathFile.Text + "' with replace", con);
                     cmd.ExecuteNonQuery();
                     cmd = new SqlCommand("alter database nks_db set multi_user", con);
                     cmd.ExecuteNonQuery();
@@ -73,7 +76,7 @@ namespace ManagerPartient.Gui
                 if (dialogResult.Equals(DialogResult.OK))
                 {
                     this.ParentForm.Close();
-                    System.Diagnostics.Process.Start(Application.ExecutablePath); // to start new instance of application
+                    System.Diagnostics.Process.Start(Application.ExecutablePath); 
                     //Application.Exit();
                     System.Diagnostics.Process.GetCurrentProcess().Kill();
                 }

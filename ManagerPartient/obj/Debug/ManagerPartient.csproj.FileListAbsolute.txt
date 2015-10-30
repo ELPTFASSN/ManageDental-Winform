@@ -59,6 +59,7 @@ C:\Users\NguyenNgoc\Desktop\Nhakhoaso\ManagerPartient\bin\Debug\System.Xml.dll
 C:\Users\NguyenNgoc\Desktop\Nhakhoaso\ManagerPartient\bin\Debug\System.Xml.Linq.dll
 C:\Users\NguyenNgoc\Desktop\Nhakhoaso\ManagerPartient\bin\Debug\EntityFramework.xml
 C:\Users\NguyenNgoc\Desktop\Nhakhoaso\ManagerPartient\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\NguyenNgoc\Desktop\Nhakhoaso\ManagerPartient\obj\Debug\ManagerPartient.csprojResolveAssemblyReference.cache
 C:\Users\NguyenNgoc\Desktop\Nhakhoaso\ManagerPartient\obj\Debug\ManagerPartient.CustomControl.ButtonFunction.resources
 C:\Users\NguyenNgoc\Desktop\Nhakhoaso\ManagerPartient\obj\Debug\ManagerPartient.CustomControl.ButtonMenuBar.resources
 C:\Users\NguyenNgoc\Desktop\Nhakhoaso\ManagerPartient\obj\Debug\ManagerPartient.CustomControl.FormLoad.resources
@@ -79,4 +80,3 @@ C:\Users\NguyenNgoc\Desktop\Nhakhoaso\ManagerPartient\obj\Debug\ManagerPartient.
 C:\Users\NguyenNgoc\Desktop\Nhakhoaso\ManagerPartient\obj\Debug\ManagerPartient.application
 C:\Users\NguyenNgoc\Desktop\Nhakhoaso\ManagerPartient\obj\Debug\ManagerPartient.exe
 C:\Users\NguyenNgoc\Desktop\Nhakhoaso\ManagerPartient\obj\Debug\ManagerPartient.pdb
-C:\Users\NguyenNgoc\Desktop\Nhakhoaso\ManagerPartient\obj\Debug\ManagerPartient.csprojResolveAssemblyReference.cache
